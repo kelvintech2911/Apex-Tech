@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# No value in indexing these
+Disallow: /404.html
+Disallow: /thank-you.html
+
+Sitemap: https://apex-tech.onrender.com/sitemap.xml

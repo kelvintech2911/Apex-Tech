@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Apex Tech</title>
+  <meta name="description"
+    content="Terms of Service for Apex Tech Digital Investigation & Mobile Forensics. Understand the terms governing the use of our services." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 300;
+      padding: 10px 18px;
+      background: var(--electric);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 0 0 6px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    :root {
+      --navy: #080B14;
+      --slate: #111827;
+      --blue: #1D4ED8;
+      --electric: #2563EB;
+      --electric-soft: #3b82f6;
+      --white: #FFFFFF;
+      --surface: #F8FAFC;
+      --tint: #EFF4FF;
+      --ink: #0B1C30;
+      --ink-2: #334155;
+      --muted: #64748B;
+      --muted-light: #94A3B8;
+      --line: #E2E8F0;
+      --f-display: "Figtree", "DM Sans", system-ui, sans-serif;
+      --f-body: "DM Sans", "Figtree", system-ui, sans-serif;
+      --f-mono: "JetBrains Mono", ui-monospace, monospace;
+      --container: 1200px;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--f-body);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Header ---------- */
+    .page-header {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      color: #fff;
+    }
+
+    .brand-accent {
+      color: var(--electric);
+    }
+
+    .page-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .page-nav a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .page-nav a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 760px) {
+      .page-nav {
+        display: none;
+      }
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ---------- Hero banner ---------- */
+    .policy-hero {
+      background: var(--navy);
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+
+    .policy-hero h1 {
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .policy-hero p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.92rem;
+    }
+
+    .policy-hero .mono {
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 0.04em;
+      margin-top: 12px;
+      display: block;
+    }
+
+    /* ---------- Content ---------- */
+    .policy-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .policy-content h2 {
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .policy-content p {
+      color: var(--ink-2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
+    .policy-content ul li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--ink-2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .policy-content ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      background: var(--electric);
+      border-radius: 1px;
+    }
+
+    .policy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .policy-content a {
+      color: var(--electric);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .policy-content a:hover {
+      color: var(--blue);
+    }
+
+    /* ---------- Footer ---------- */
+    .page-footer {
+      background: var(--navy);
+      padding: 28px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-inner a {
+      color: rgba(255, 255, 255, 0.65);
+      transition: color 0.2s ease;
+    }
+
+    .footer-inner a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 560px) {
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-inner {
+        height: 60px;
+      }
+
+      .policy-hero {
+        padding: 48px 0 40px;
+      }
+
+      .policy-content {
+        padding: 48px 18px 72px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔎</text></svg>">
+  <!-- SEO Tags -->
+  <meta name="keywords" content="terms of service, Apex Tech terms, digital investigation terms, mobile forensics terms">
+  <meta name="author" content="Apex Tech">
+  <meta name="theme-color" content="#080B14">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apex-tech.onrender.com/terms.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apex-tech.onrender.com/terms.html">
+  <meta property="og:site_name" content="Apex Tech">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Terms of Service — Apex Tech">
+  <meta property="og:description" content="Terms of Service for Apex Tech Digital Investigation &amp; Mobile Forensics. Understand the terms governing the use of our services.">
+  <meta property="og:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  
+  <!-- Twitter -->
+  <meta name="twitter:url" content="https://apex-tech.onrender.com/terms.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service — Apex Tech">
+  <meta name="twitter:description" content="Terms of Service for Apex Tech Digital Investigation &amp; Mobile Forensics. Understand the terms governing the use of our services.">
+  <meta name="twitter:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  <!-- ============================================================
+       TRACKING CONFIG
+       Paste the IDs here once Meta / Google approve the account.
+       Nothing third-party loads until a visitor accepts cookies, and
+       nothing loads at all while these are empty.
+       ============================================================ -->
+  <script>
+    window.FT_CONFIG = {
+      metaPixelId: '',        // TODO Apex Tech: add your own Meta Pixel ID
+      ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
+      turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
+      minFormSeconds: 3,      // submissions faster than this are treated as bots
+      privacyUrl: 'privacy.html'
+    };
+  </script>
+  <script src="ft-tracking.js"></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex Tech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="36" height="36" fill="none">
+            <defs>
+              <linearGradient id="logoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+                <stop offset="0%" stop-color="var(--electric-soft)" />
+                <stop offset="100%" stop-color="var(--blue)" />
+              </linearGradient>
+            </defs>
+            <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
+              stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round" />
+            <circle cx="45" cy="50" r="7" fill="#fff" />
+            <circle cx="68" cy="52" r="4.5" fill="#fff" />
+          </svg>
+        </span>
+        <span>Apex <span class="brand-accent">Tech</span></span>
+      </a>
+      <nav class="page-nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="policy-hero" id="main" tabindex="-1">
+    <div class="container">
+      <h1>Terms of Service</h1>
+      <p>Terms and conditions governing the use of Apex Tech services.</p>
+      <span class="mono">Last updated: August 2026</span>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <article class="policy-content">
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing our website or engaging the services of Apex Tech ("we", "our", or "us"), you agree to be bound
+      by these Terms of Service. If you do not agree with any part of these terms, please do not use our website or
+      services.</p>
+
+    <h2>2. Services Overview</h2>
+    <p>Apex Tech provides professional digital investigation and mobile forensics services, including but not limited
+      to:</p>
+    <ul>
+      <li>Mobile phone forensic analysis and data extraction.</li>
+      <li>Data recovery from digital devices and storage media.</li>
+      <li>Digital evidence collection and preservation.</li>
+      <li>Cyber investigation and online activity analysis.</li>
+      <li>Email and communications investigation.</li>
+      <li>Fraud investigation and digital audit support.</li>
+      <li>Device access and unlocking services.</li>
+    </ul>
+    <p>All services are provided subject to technical feasibility, legal authorization, and a prior consultation to
+      determine scope and requirements.</p>
+
+    <h2>3. Consultation & Engagement</h2>
+    <p>All engagements begin with an initial consultation to understand your requirements. Submitting a contact form or
+      consultation request does not constitute a binding agreement. A formal engagement begins only when both parties
+      have agreed on the scope, timeline, and terms of the investigation.</p>
+
+    <h2>4. Client Responsibilities</h2>
+    <p>When engaging our services, you agree to:</p>
+    <ul>
+      <li>Provide accurate and truthful information about your case and requirements.</li>
+      <li>Confirm that you have legal authority or proper authorization to request the investigation.</li>
+      <li>Not use our services for any unlawful purpose or in violation of any applicable law.</li>
+      <li>Cooperate with reasonable requests for information or access needed to perform the investigation.</li>
+      <li>Refrain from sharing sensitive credentials or passwords through unsecured channels unless instructed.</li>
+    </ul>
+
+    <h2>5. Authorization & Legal Compliance</h2>
+    <p>Apex Tech operates within the boundaries of applicable law. We reserve the right to decline any engagement
+      that, in our professional judgment, may involve unlawful activity, lack proper authorization, or pose ethical
+      concerns. Clients are solely responsible for ensuring they have the legal right to request the services being
+      sought.</p>
+
+    <h2>6. Confidentiality</h2>
+    <p>All information shared with us during the course of an investigation is treated as strictly confidential. We do
+      not disclose case details, findings, or client information to unauthorized third parties. Our confidentiality
+      obligations survive the completion or termination of any engagement.</p>
+
+    <h2>7. Deliverables & Reports</h2>
+    <p>Where applicable, we provide written documentation of our findings, methods used, and conclusions. Reports are
+      prepared for the intended audience and delivered in a clear, professional format. The specific deliverables will
+      be agreed upon during the engagement process.</p>
+
+    <h2>8. Fees & Payment</h2>
+    <p>Service fees are determined on a case-by-case basis and communicated during the consultation process. Payment
+      terms, including any deposits or milestone payments, will be agreed upon before work begins. All fees are
+      non-refundable once the investigation work has commenced, unless otherwise agreed in writing.</p>
+
+    <h2>9. Limitation of Liability</h2>
+    <p>While we strive to deliver thorough and accurate results, the nature of digital investigation means that outcomes
+      cannot be guaranteed. Specifically:</p>
+    <ul>
+      <li>Data recovery success depends on the condition of the device and how it was used after data loss.</li>
+      <li>Forensic findings are based on available evidence and accepted methodologies at the time of analysis.</li>
+      <li>We are not liable for decisions made based on our findings or reports.</li>
+      <li>Our total liability for any claim shall not exceed the fees paid for the specific service giving rise to the
+        claim.</li>
+    </ul>
+
+    <h2>10. Intellectual Property</h2>
+    <p>All methodologies, tools, techniques, and proprietary processes used by Apex Tech remain our intellectual
+      property. Reports and deliverables provided to clients may be used for their intended purpose but may not be
+      reproduced, distributed, or published without our written consent.</p>
+
+    <h2>11. Termination</h2>
+    <p>Either party may terminate an engagement with written notice. In the event of termination, the client is
+      responsible for fees associated with work already completed. We reserve the right to terminate any engagement
+      immediately if we discover the engagement involves unlawful activity or misrepresentation.</p>
+
+    <h2>12. Website Use</h2>
+    <p>By using our website, you agree not to:</p>
+    <ul>
+      <li>Attempt to gain unauthorized access to our systems or data.</li>
+      <li>Use automated tools to scrape, copy, or interfere with website functionality.</li>
+      <li>Submit false or misleading information through our contact forms.</li>
+      <li>Use the website in any way that could damage, disable, or impair our services.</li>
+    </ul>
+
+    <h2>13. Changes to These Terms</h2>
+    <p>We reserve the right to update these Terms of Service at any time. Changes take effect upon posting to this page.
+      Continued use of our website or services after changes constitutes acceptance of the revised terms.</p>
+
+    <h2>14. Governing Law</h2>
+    <p>These Terms of Service shall be governed by and construed in accordance with applicable laws. Any disputes arising
+      from these terms or the use of our services shall be resolved through appropriate legal channels.</p>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have questions about these Terms of Service, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>
+      </li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/13436350317" target="_blank"
+          rel="noopener noreferrer">+1 (343) 635-0317</a></li>
+      <li><strong>Telegram:</strong> <a href="https://t.me/Apextechforensics" target="_blank"
+          rel="noopener noreferrer">@Apextechforensics</a></li>
+    </ul>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container footer-inner">
+      <span>&copy; <span class="year">2026</span> Apex Tech. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

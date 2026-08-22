@@ -1,0 +1,54 @@
+# Render Blueprint — Apex Tech website
+#
+# Only ./public is published, so development files at the repo root
+# (set-site-url.py, testimonial-drafts.md, hero-bg.png) are never served.
+#
+# You can either:
+#   a) create the service from this file  — Render dashboard → New → Blueprint
+#   b) create it by hand                  — New → Static Site, then set:
+#        Build Command      : (leave empty)
+#        Publish Directory  : public
+#
+# A hand-created Static Site ignores this file; that is fine, the settings
+# above are the same.
+
+services:
+  - type: web
+    name: apex-tech
+    runtime: static
+    staticPublishPath: ./public
+    buildCommand: echo "static site - nothing to build"
+    pullRequestPreviewsEnabled: false
+
+    headers:
+      # --- baseline hardening -------------------------------------------
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: geolocation=(), microphone=(), camera=(), payment=()
+
+      # --- caching ------------------------------------------------------
+      # HTML stays fresh so edits appear immediately.
+      - path: /*.html
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      # ft-tracking.js changes when the Pixel ID is added, so keep it short.
+      - path: /ft-tracking.js
+        name: Cache-Control
+        value: public, max-age=300, must-revalidate
+      # The link-preview image is stable.
+      - path: /og-image.jpg
+        name: Cache-Control
+        value: public, max-age=604800
+
+# NOTE: deliberately no catch-all rewrite to /index.html.
+# This is a multi-page site, not a single-page app — a catch-all would stop
+# Render serving 404.html for unknown paths.

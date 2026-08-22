@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Apex Tech</title>
+  <meta name="description"
+    content="Privacy Policy for Apex Tech Digital Investigation & Mobile Forensics. Learn how we collect, use, and protect your personal information." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 300;
+      padding: 10px 18px;
+      background: var(--electric);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 0 0 6px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    :root {
+      --navy: #080B14;
+      --slate: #111827;
+      --blue: #1D4ED8;
+      --electric: #2563EB;
+      --electric-soft: #3b82f6;
+      --white: #FFFFFF;
+      --surface: #F8FAFC;
+      --tint: #EFF4FF;
+      --ink: #0B1C30;
+      --ink-2: #334155;
+      --muted: #64748B;
+      --muted-light: #94A3B8;
+      --line: #E2E8F0;
+      --f-display: "Figtree", "DM Sans", system-ui, sans-serif;
+      --f-body: "DM Sans", "Figtree", system-ui, sans-serif;
+      --f-mono: "JetBrains Mono", ui-monospace, monospace;
+      --container: 1200px;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--f-body);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Header ---------- */
+    .page-header {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      color: #fff;
+    }
+
+    .brand-accent {
+      color: var(--electric);
+    }
+
+    .page-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .page-nav a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .page-nav a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 760px) {
+      .page-nav {
+        display: none;
+      }
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ---------- Hero banner ---------- */
+    .policy-hero {
+      background: var(--navy);
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+
+    .policy-hero h1 {
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .policy-hero p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.92rem;
+    }
+
+    .policy-hero .mono {
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 0.04em;
+      margin-top: 12px;
+      display: block;
+    }
+
+    /* ---------- Content ---------- */
+    .policy-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .policy-content h2 {
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .policy-content p {
+      color: var(--ink-2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
+    .policy-content ul li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--ink-2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .policy-content ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      background: var(--electric);
+      border-radius: 1px;
+    }
+
+    .policy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .policy-content a {
+      color: var(--electric);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .policy-content a:hover {
+      color: var(--blue);
+    }
+
+    /* ---------- Footer ---------- */
+    .page-footer {
+      background: var(--navy);
+      padding: 28px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-inner a {
+      color: rgba(255, 255, 255, 0.65);
+      transition: color 0.2s ease;
+    }
+
+    .footer-inner a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 560px) {
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-inner {
+        height: 60px;
+      }
+
+      .policy-hero {
+        padding: 48px 0 40px;
+      }
+
+      .policy-content {
+        padding: 48px 18px 72px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔎</text></svg>">
+  <!-- SEO Tags -->
+  <meta name="keywords" content="privacy policy, digital investigation privacy, mobile forensics privacy, Apex Tech privacy">
+  <meta name="author" content="Apex Tech">
+  <meta name="theme-color" content="#080B14">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apex-tech.onrender.com/privacy.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apex-tech.onrender.com/privacy.html">
+  <meta property="og:site_name" content="Apex Tech">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Privacy Policy — Apex Tech">
+  <meta property="og:description" content="Privacy Policy for Apex Tech Digital Investigation &amp; Mobile Forensics. Learn how we collect, use, and protect your personal information.">
+  <meta property="og:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  
+  <!-- Twitter -->
+  <meta name="twitter:url" content="https://apex-tech.onrender.com/privacy.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy — Apex Tech">
+  <meta name="twitter:description" content="Privacy Policy for Apex Tech Digital Investigation &amp; Mobile Forensics. Learn how we collect, use, and protect your personal information.">
+  <meta name="twitter:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  <!-- ============================================================
+       TRACKING CONFIG
+       Paste the IDs here once Meta / Google approve the account.
+       Nothing third-party loads until a visitor accepts cookies, and
+       nothing loads at all while these are empty.
+       ============================================================ -->
+  <script>
+    window.FT_CONFIG = {
+      metaPixelId: '',        // TODO Apex Tech: add your own Meta Pixel ID
+      ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
+      turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
+      minFormSeconds: 3,      // submissions faster than this are treated as bots
+      privacyUrl: 'privacy.html'
+    };
+  </script>
+  <script src="ft-tracking.js"></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex Tech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="36" height="36" fill="none">
+            <defs>
+              <linearGradient id="logoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+                <stop offset="0%" stop-color="var(--electric-soft)" />
+                <stop offset="100%" stop-color="var(--blue)" />
+              </linearGradient>
+            </defs>
+            <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
+              stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round" />
+            <circle cx="45" cy="50" r="7" fill="#fff" />
+            <circle cx="68" cy="52" r="4.5" fill="#fff" />
+          </svg>
+        </span>
+        <span>Apex <span class="brand-accent">Tech</span></span>
+      </a>
+      <nav class="page-nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="policy-hero" id="main" tabindex="-1">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>How we collect, use, and protect your personal information.</p>
+      <span class="mono">Last updated: August 2026</span>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <article class="policy-content">
+
+    <h2>1. Introduction</h2>
+    <p>Apex Tech ("we", "our", or "us") is committed to protecting the privacy and confidentiality of all individuals
+      who interact with our services. This Privacy Policy explains how we collect, use, store, and safeguard your
+      personal information when you visit our website, use our services, or communicate with us.</p>
+    <p>By using our website or engaging our services, you acknowledge that you have read and understood this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We may collect the following types of information:</p>
+    <ul>
+      <li><strong>Contact Information:</strong> Name, email address, phone number, and any details you provide through
+        our contact form or consultation requests.</li>
+      <li><strong>Case Information:</strong> Details related to your investigation requirements, including device types,
+        incident descriptions, and supporting documentation you choose to share.</li>
+      <li><strong>Website Usage Data:</strong> Browser type, IP address, pages visited, and interaction patterns
+        collected through standard web analytics.</li>
+      <li><strong>Referral &amp; Campaign Data:</strong> Where applicable, information about how you reached our site,
+        such as the referring website and any advertising campaign identifiers included in the link you followed. This
+        is recorded with your enquiry so we understand which of our campaigns it came from.</li>
+      <li><strong>Communication Records:</strong> Records of correspondence between you and our team via email, phone,
+        WhatsApp, or Telegram.</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Respond to your inquiries and consultation requests.</li>
+      <li>Provide digital investigation and forensic services as agreed.</li>
+      <li>Communicate updates about your case or our services.</li>
+      <li>Improve our website and service delivery.</li>
+      <li>Comply with legal and regulatory obligations.</li>
+    </ul>
+
+    <h2>4. Data Protection & Security</h2>
+    <p>We take the security of your data seriously. All personal and case-related information is handled with strict
+      confidentiality. Our security measures include:</p>
+    <ul>
+      <li>Encrypted communications for sensitive data transmission.</li>
+      <li>Restricted access — only authorized personnel handle your information.</li>
+      <li>Secure storage systems with appropriate access controls.</li>
+      <li>Regular review and updating of our security practices.</li>
+    </ul>
+
+    <h2>5. Data Sharing & Disclosure</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share information only in the
+      following circumstances:</p>
+    <ul>
+      <li><strong>With your consent:</strong> When you have given explicit permission.</li>
+      <li><strong>Legal requirements:</strong> When required by law, court order, or regulatory authority.</li>
+      <li><strong>Service delivery:</strong> With trusted partners directly involved in delivering our services, bound by
+        confidentiality obligations.</li>
+      <li><strong>Service providers:</strong> With providers who operate parts of this website on our behalf. Enquiries
+        submitted through our forms are processed and delivered to us by Web3Forms, and our website analytics and
+        advertising measurement are provided by the platforms described in section 8. These providers process the data
+        only to provide their service to us.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <p>We retain your personal information only for as long as necessary to fulfil the purposes for which it was
+      collected, including meeting legal, accounting, or reporting requirements. Case-related data is retained in
+      accordance with applicable professional and legal standards.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request access to the personal information we hold about you.</li>
+      <li>Request correction of inaccurate or incomplete information.</li>
+      <li>Request deletion of your personal data, subject to legal obligations.</li>
+      <li>Withdraw consent for communications at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at
+      <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>.
+    </p>
+
+    <h2>8. Cookies &amp; Tracking</h2>
+    <p>Our website uses cookies and similar technologies for the following purposes:</p>
+    <ul>
+      <li><strong>Essential:</strong> Cookies and browser storage required for the site to function, including
+        remembering how you arrived at the site during your visit.</li>
+      <li><strong>Analytics:</strong> We use website analytics to understand how visitors find and use our site, such as
+        which pages are viewed and how long visitors stay.</li>
+      <li><strong>Advertising and measurement:</strong> We advertise on third-party platforms, including Meta (Facebook
+        and Instagram). These platforms place cookies and receive information about your visit so that we can measure
+        the performance of our advertising, understand which campaigns lead to enquiries, and show relevant ads to
+        people who have visited our site.</li>
+    </ul>
+    <p>Where we run advertising, information such as your IP address, browser and device details, the pages you view,
+      and whether you submit an enquiry may be shared with the advertising platform. This is used for measurement and
+      audience purposes and is subject to that platform&rsquo;s own privacy policy. You can review Meta&rsquo;s at
+      <a href="https://www.facebook.com/privacy/policy/" target="_blank"
+        rel="noopener noreferrer">facebook.com/privacy/policy</a>.</p>
+    <p>You can control cookies through your browser settings, and you can opt out of interest-based advertising through
+      your Meta ad preferences or through your device&rsquo;s advertising settings. Blocking non-essential cookies will
+      not prevent you from using this site or contacting us.</p>
+    <p>We do not sell your personal information, and we do not use these technologies to access anything on your device
+      beyond the standard information your browser provides.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated
+      revision date. We encourage you to review this policy periodically.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>
+      </li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/13436350317" target="_blank"
+          rel="noopener noreferrer">+1 (343) 635-0317</a></li>
+      <li><strong>Telegram:</strong> <a href="https://t.me/Apextechforensics" target="_blank"
+          rel="noopener noreferrer">@Apextechforensics</a></li>
+    </ul>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container footer-inner">
+      <span>&copy; <span class="year">2026</span> Apex Tech. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

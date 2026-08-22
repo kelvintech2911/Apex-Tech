@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Not Found — Apex Tech</title>
+  <meta name="description" content="The page or evidence you are looking for cannot be found." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 300;
+      padding: 10px 18px;
+      background: var(--electric);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 0 0 6px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    :root {
+      --navy: #080B14;
+      --slate: #111827;
+      --blue: #1D4ED8;
+      --electric: #2563EB;
+      --electric-soft: #3b82f6;
+      --white: #FFFFFF;
+      --surface: #F8FAFC;
+      --ink: #0B1C30;
+      --ink-2: #334155;
+      --muted: #64748B;
+      --line: #E2E8F0;
+      --f-display: "Figtree", "DM Sans", system-ui, sans-serif;
+      --f-body: "DM Sans", "Figtree", system-ui, sans-serif;
+      --f-mono: "JetBrains Mono", ui-monospace, monospace;
+      --container: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--f-body);
+      color: var(--ink);
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Header ---------- */
+    .page-header {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      color: #fff;
+    }
+
+    .brand-accent {
+      color: var(--electric);
+    }
+
+    .page-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .page-nav a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .page-nav a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 760px) {
+      .page-nav {
+        display: none;
+      }
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ---------- 404 Main Content ---------- */
+    .error-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background decorative element */
+    .error-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      height: 80vw;
+      max-width: 800px;
+      max-height: 800px;
+      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .error-content {
+      position: relative;
+      z-index: 1;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .error-icon {
+      width: 120px;
+      height: 120px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      z-index: 2;
+      animation: float-bot 6s ease-in-out infinite alternate;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    }
+
+    @keyframes float-bot {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+
+    .error-code {
+      font-family: var(--f-mono);
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
+      margin-bottom: 24px;
+      position: relative;
+      letter-spacing: -0.05em;
+    }
+
+    .error-code::after {
+      content: '404';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--electric-soft) 0%, var(--blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.8;
+      filter: drop-shadow(0 0 30px rgba(37, 99, 235, 0.4));
+    }
+
+    .error-title {
+      font-family: var(--f-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .error-desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--electric);
+      color: #fff;
+      font-family: var(--f-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 10px 22px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-return:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-return svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ---------- Footer ---------- */
+    .page-footer {
+      background: var(--navy);
+      padding: 28px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-inner a {
+      color: rgba(255, 255, 255, 0.65);
+      transition: color 0.2s ease;
+    }
+
+    .footer-inner a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 560px) {
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-inner {
+        height: 60px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔎</text></svg>">
+  <!-- SEO Tags -->
+  <meta name="theme-color" content="#080B14">
+  <meta name="robots" content="noindex, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Apex Tech">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="404 Not Found — Apex Tech">
+  <meta property="og:description" content="The page or evidence you are looking for cannot be found.">
+  <meta property="og:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 Not Found — Apex Tech">
+  <meta name="twitter:description" content="The page or evidence you are looking for cannot be found.">
+  <meta name="twitter:image" content="https://apex-tech.onrender.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Apex Tech — digital investigation and mobile forensics">
+  <!-- ============================================================
+       TRACKING CONFIG
+       Paste the IDs here once Meta / Google approve the account.
+       Nothing third-party loads until a visitor accepts cookies, and
+       nothing loads at all while these are empty.
+       ============================================================ -->
+  <script>
+    window.FT_CONFIG = {
+      metaPixelId: '',        // TODO Apex Tech: add your own Meta Pixel ID
+      ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
+      turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
+      minFormSeconds: 3,      // submissions faster than this are treated as bots
+      privacyUrl: 'privacy.html'
+    };
+  </script>
+  <script src="ft-tracking.js"></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex Tech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="36" height="36" fill="none">
+            <defs>
+              <linearGradient id="logoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+                <stop offset="0%" stop-color="var(--electric-soft)" />
+                <stop offset="100%" stop-color="var(--blue)" />
+              </linearGradient>
+            </defs>
+            <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
+              stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round" />
+            <circle cx="45" cy="50" r="7" fill="#fff" />
+            <circle cx="68" cy="52" r="4.5" fill="#fff" />
+          </svg>
+        </span>
+        <span>Apex <span class="brand-accent">Tech</span></span>
+      </a>
+      <nav class="page-nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- 404 Main -->
+  <main class="error-main" id="main" tabindex="-1">
+    <div class="error-bg"></div>
+    <div class="error-content">
+      <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <path d="m9 15 6-6"/>
+        <path d="m15 15-6-6"/>
+      </svg>
+      <div class="error-code">404</div>
+      <h1 class="error-title">No Content Found</h1>
+      <p class="error-desc">The page you are looking is not Available.</p>
+      <a href="index.html" class="btn-return">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="m12 19-7-7 7-7"/>
+          <path d="M19 12H5"/>
+        </svg>
+        Return to Headquarters
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container footer-inner">
+      <span>&copy; <span class="year">2026</span> Apex Tech. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
