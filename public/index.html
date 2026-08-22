@@ -20,2209 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
   </noscript>
 
-  <style>
-    /* ============================================================
-   APEX TECH Digital Forensics & Investigation
-   Design system: Deep Navy authority + clean evidence surfaces
-   ============================================================ */
-
-    :root {
-      /* Brand */
-      --navy: #080B14;
-      --slate: #111827;
-      --blue: #1D4ED8;
-      --electric: #2563EB;
-      --electric-soft: #3b82f6;
-
-      /* Surfaces */
-      --white: #FFFFFF;
-      --surface: #F8FAFC;
-      --tint: #EFF4FF;
-      --tint-2: #E5EEFF;
-
-      /* Ink */
-      --ink: #0B1C30;
-      --ink-2: #334155;
-      --muted: #64748B;
-      --muted-light: #69778A;
-
-      /* Lines / effects */
-      --line: #E2E8F0;
-      --line-dark: rgba(255, 255, 255, 0.10);
-      --shadow-med: 0 24px 48px -12px rgba(8, 11, 20, 0.10);
-      --shadow-soft: 0 2px 8px rgba(8, 11, 20, 0.04);
-      --glow: 0 0 0 4px rgba(37, 99, 235, 0.12);
-
-      /* Gradient */
-      --grad-hero: linear-gradient(135deg, #080B14 0%, #111827 55%, #1D4ED8 100%);
-
-      /* Type */
-      --f-display: "Figtree", "DM Sans", system-ui, sans-serif;
-      --f-body: "DM Sans", "Figtree", system-ui, sans-serif;
-      --f-mono: "JetBrains Mono", ui-monospace, monospace;
-
-      /* Layout */
-      --container: 1200px;
-      --radius: 4px;
-      --radius-lg: 8px;
-      --radius-xl: 12px;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    /* Skip to content */
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 0;
-      z-index: 300;
-      padding: 10px 18px;
-      background: var(--electric);
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
-      border-radius: 0 0 8px 0;
-    }
-
-    .skip-link:focus {
-      left: 0;
-    }
-
-    /* ---------- Reset ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 88px;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      font-family: var(--f-body);
-      color: var(--ink);
-      background: var(--white);
-      line-height: 1.6;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      overflow-x: hidden;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul,
-    ol {
-      list-style: none;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    input,
-    select,
-    textarea {
-      font-family: inherit;
-      font-size: inherit;
-    }
-
-    /* Inline icon holders (self-contained icon set) */
-    .icon {
-      display: inline-grid;
-      place-items: center;
-      line-height: 0;
-    }
-
-    .icon svg {
-      display: block;
-    }
-
-    .trust-ico,
-    .faq-chev,
-    .select-chev,
-    .btn-ico {
-      line-height: 0;
-    }
-
-    /* ---------- Layout helpers ---------- */
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .container-narrow {
-      max-width: 820px;
-    }
-
-    .section {
-      padding: 96px 0;
-    }
-
-    .section-tint {
-      background: var(--surface);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-head {
-      max-width: 680px;
-      margin: 0 auto 56px;
-      text-align: center;
-    }
-
-    .section-title {
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-
-    .section-lead {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .title-light {
-      color: var(--white);
-    }
-
-    .lead-light {
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    /* ---------- Eyebrow (evidence tag) ---------- */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--f-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--electric);
-      margin-bottom: 18px;
-    }
-
-    .eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--electric);
-      border-radius: 1px;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
-    }
-
-    .eyebrow-light .eyebrow-dot {
-      background: #93b4ff;
-      box-shadow: 0 0 0 3px rgba(147, 180, 255, 0.18);
-    }
-
-    /* ---------- Buttons ---------- */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      font-family: var(--f-body);
-      font-weight: 600;
-      font-size: 0.82rem;
-      padding: 9px 18px;
-      border-radius: 9999px;
-      transition: transform .18s ease, background .2s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease;
-      white-space: nowrap;
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-
-    .btn-ico {
-      width: 15px;
-      height: 15px;
-      flex-shrink: 0;
-    }
-
-    .btn:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
-    }
-
-    .btn-sm {
-      padding: 8px 15px;
-      font-size: 0.8rem;
-    }
-
-    .btn-block {
-      width: 100%;
-    }
-
-    .btn-primary {
-      background: var(--electric);
-      color: #fff;
-      box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.5);
-    }
-
-    .btn-primary:hover {
-      background: var(--blue);
-      transform: translateY(-2px);
-      box-shadow: 0 14px 26px -8px rgba(37, 99, 235, 0.55);
-    }
-
-    .btn-ghost-light {
-      background: rgba(255, 255, 255, 0.04);
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.28);
-    }
-
-    .btn-ghost-light:hover {
-      background: rgba(255, 255, 255, 0.10);
-      border-color: rgba(255, 255, 255, 0.55);
-      transform: translateY(-2px);
-    }
-
-    /* Dropdown Component */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%) translateY(10px) scale(0.96);
-      transform-origin: top center;
-      background: rgba(11, 28, 48, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 32px;
-      padding: 5px;
-      min-width: unset;
-      display: flex;
-      flex-direction: row;
-      gap: 3px;
-      opacity: 0;
-      pointer-events: none;
-      transition: transform .3s cubic-bezier(0.2, 0.9, 0.3, 1.1), opacity .3s ease;
-      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      z-index: 50;
-    }
-
-    .dropdown-menu.show {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-
-    .dropdown-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px 6px 10px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.8rem;
-      font-weight: 500;
-      border-radius: 24px;
-      transition: background 0.2s ease, color 0.2s ease;
-      text-decoration: none;
-    }
-
-    .dropdown-item:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-
-    .contact-ico {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-    }
-
-    /* ============================================================
-   HEADER
-   ============================================================ */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
-      border-bottom: 1px solid transparent;
-    }
-
-    .site-header.scrolled {
-      background: rgba(255, 255, 255, 0.86);
-      backdrop-filter: saturate(180%) blur(14px);
-      -webkit-backdrop-filter: saturate(180%) blur(14px);
-      border-bottom-color: var(--line);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .brand,
-    .header-actions {
-      flex: 1;
-      display: flex;
-      align-items: center;
-    }
-
-    .header-actions {
-      justify-content: flex-end;
-      gap: 16px;
-    }
-
-    .brand {
-      justify-content: flex-start;
-      gap: 4px;
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: -0.01em;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      color: #fff;
-    }
-
-    .brand-mark svg {
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
-    }
-
-    .brand:hover .brand-mark svg {
-      transform: scale(1.15) rotate(5deg);
-      filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.8));
-    }
-
-    .brand-word {
-      color: inherit;
-    }
-
-    .brand-accent {
-      color: var(--electric);
-      transition: text-shadow 0.3s ease;
-    }
-
-    .brand:hover .brand-accent {
-      text-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
-    }
-
-    .logo-eye {
-      fill: #fff;
-      transition: fill .3s ease;
-    }
-
-    .scrolled .brand {
-      color: var(--ink);
-    }
-
-    .scrolled .brand-accent {
-      color: var(--electric);
-    }
-
-    .scrolled .logo-eye {
-      fill: var(--ink);
-    }
-
-    .main-nav {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .nav-link {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.82);
-      transition: color .18s ease;
-      position: relative;
-    }
-
-    .nav-link:hover {
-      color: #fff;
-    }
-
-    .scrolled .nav-link {
-      color: var(--ink-2);
-    }
-
-    .scrolled .nav-link:hover {
-      color: var(--electric);
-    }
-
-    .nav-cta {
-      margin-left: 0;
-    }
-
-    /* Hamburger */
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      width: 42px;
-      height: 42px;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--radius);
-      position: relative;
-      z-index: 210;
-    }
-
-    .nav-toggle span {
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: transform .28s ease, opacity .2s ease, background .3s ease;
-    }
-
-    .scrolled .nav-toggle span {
-      background: var(--ink);
-    }
-
-    .nav-toggle.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .nav-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .nav-toggle.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* When overlay is open, hamburger X bars are always white */
-    .nav-toggle.open span {
-      background: #fff !important;
-    }
-
-    /* Body scroll lock */
-    .body-no-scroll {
-      overflow: hidden !important;
-      height: 100vh !important;
-      height: 100dvh !important;
-    }
-
-    /* ---- Full-screen mobile overlay ---- */
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
-      z-index: 200;
-      background: var(--navy);
-      background-image: radial-gradient(circle at 50% 90%, rgba(29, 78, 216, 0.18), transparent 60%);
-      display: flex;
-      flex-direction: column;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity .4s cubic-bezier(0.4, 0, 0.2, 1), visibility .4s;
-    }
-
-    .mobile-nav.open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    /* Header bar inside overlay: logo left, close X right */
-    .mobile-nav-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 24px;
-      flex-shrink: 0;
-      height: 72px;
-    }
-
-    .mobile-brand {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .mobile-brand .brand-accent {
-      color: var(--electric);
-    }
-
-    .mobile-close-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: rgba(255, 255, 255, 0.7);
-      transition: color .2s ease, transform .2s ease;
-    }
-
-    .mobile-close-btn:hover {
-      color: #fff;
-      transform: rotate(90deg);
-    }
-
-    .mobile-close-btn svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    /* Centered links area */
-    .mobile-nav-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      padding: 0 24px;
-    }
-
-    .mobile-link {
-      display: block;
-      padding: 20px 8px;
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: clamp(1.5rem, 5vw, 2rem);
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      position: relative;
-      transition: color .2s ease, transform .2s ease;
-    }
-
-    .mobile-link::after {
-      content: '';
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%) scaleX(0);
-      width: 40px;
-      height: 2px;
-      background: var(--electric);
-      border-radius: 2px;
-      transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .mobile-link:hover {
-      color: var(--electric-soft);
-      transform: translateY(-2px);
-    }
-
-    .mobile-link:hover::after {
-      transform: translateX(-50%) scaleX(1);
-    }
-
-    /* Stagger link animation on open */
-    .mobile-nav.open .mobile-link {
-      animation: mobileSlideUp .45s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-    .mobile-nav.open .mobile-link:nth-child(1) { animation-delay: .06s; }
-    .mobile-nav.open .mobile-link:nth-child(2) { animation-delay: .12s; }
-    .mobile-nav.open .mobile-link:nth-child(3) { animation-delay: .18s; }
-    .mobile-nav.open .mobile-link:nth-child(4) { animation-delay: .24s; }
-    .mobile-nav.open .mobile-link:nth-child(5) { animation-delay: .30s; }
-
-    @keyframes mobileSlideUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* CTA at bottom of overlay */
-    .mobile-nav-footer {
-      flex-shrink: 0;
-      padding: 24px 32px 40px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .mobile-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      font-family: var(--f-body);
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 11px 30px;
-      border-radius: 9999px;
-      background: var(--electric);
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.55);
-      transition: transform .22s ease, background .2s ease, box-shadow .2s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .mobile-cta:hover {
-      background: var(--blue);
-      transform: translateY(-2px);
-      box-shadow: 0 16px 36px -8px rgba(37, 99, 235, 0.6);
-    }
-
-    .mobile-nav.open .mobile-cta {
-      animation: mobileSlideUp .45s cubic-bezier(0.16, 1, 0.3, 1) both;
-      animation-delay: .36s;
-    }
-
-    /* ============================================================
-   HERO
-   ============================================================ */
-    .hero {
-      position: relative;
-      color: #fff;
-      padding: 110px 0 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      /* dvh keeps the CTA above the fold inside the Facebook/Instagram
-         in-app browser, where 100vh sits behind the browser chrome */
-      min-height: 100vh;
-      min-height: 100dvh;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: -25px;
-      z-index: -1;
-      background: linear-gradient(rgba(8, 11, 20, 0.75), rgba(8, 11, 20, 0.9));
-
-      animation: heroMotion 25s infinite alternate ease-in-out;
-    }
-
-    @keyframes heroMotion {
-      0% {
-        transform: scale(1) translate(0, 0);
-      }
-
-      100% {
-        transform: scale(1.05) translate(-10px, 10px);
-      }
-    }
-
-    .hero-canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 840px;
-      margin: 6vh auto auto auto;
-      width: 100%;
-    }
-
-    .hero-title {
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: clamp(2rem, 3.8vw, 3rem);
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-      margin: 0 0 22px;
-    }
-
-    .text-glow {
-      color: #bcd2ff;
-      text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
-    }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.78);
-      max-width: 620px;
-      margin: 0 auto;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 60px;
-      margin-bottom: 64px;
-    }
-
-    /* Hero CTAs — reference pill proportions (~3.3:1), desktop scale */
-    .hero-actions .btn,
-    .final-cta-actions .btn {
-      min-width: 200px;
-      height: 60px;
-      padding: 0 26px;
-      font-size: 0.95rem;
-      border-radius: 9999px;
-    }
-
-    .hero-actions .btn .btn-ico,
-    .final-cta-actions .btn .btn-ico {
-      width: 17px;
-      height: 17px;
-    }
-
-    @keyframes scan {
-      0% {
-        top: -90px;
-      }
-
-      55%,
-      100% {
-        top: 100%;
-      }
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.35;
-      }
-    }
-
-    /* ============================================================
-   TRUST BAR
-   ============================================================ */
-    .trust {
-      width: 100%;
-      padding: 40px 0;
-      background: transparent;
-    }
-
-    .trust-inner {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px;
-      padding: 0 24px;
-    }
-
-    .trust-item {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 6px;
-      background: transparent;
-      transition: transform 0.3s ease;
-    }
-
-    .trust-item:hover {
-      transform: translateY(-4px);
-    }
-
-    .trust-ico {
-      display: inline-grid;
-      place-items: center;
-      color: #93b4ff;
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      filter: drop-shadow(0 0 8px rgba(147, 180, 255, 0.3));
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 0;
-    }
-
-    .trust-item small {
-      display: block;
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.7rem;
-      line-height: 1.1;
-      margin-top: 1px;
-    }
-
-    /* ============================================================
-   CARDS (shared)
-   ============================================================ */
-    .card-grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .serve-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card {
-      position: relative;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-    }
-
-    .card-ico {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      color: var(--electric);
-      background: var(--tint);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      margin-bottom: 18px;
-      transition: all .22s ease;
-    }
-
-    .card-ico svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .card-title {
-      font-family: var(--f-display);
-      font-weight: 600;
-      font-size: 1.08rem;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
-    }
-
-    .card-text {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .svc-card:hover .card-ico {
-      background: var(--electric);
-      color: #fff;
-      border-color: var(--electric);
-    }
-
-    /* ============================================================
-   WHO WE SERVE SECTION
-   ============================================================ */
-    .serve-section {
-      position: relative;
-      color: #fff;
-      overflow: hidden;
-      padding: 100px 0;
-      z-index: 1;
-    }
-
-    .serve-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      /* Dark overlay — no external image dependency */
-      background: linear-gradient(135deg, rgba(8, 11, 20, 0.92) 0%, rgba(17, 24, 39, 0.88) 50%, rgba(29, 78, 216, 0.25) 100%);
-      pointer-events: none;
-    }
-
-    .serve-section .serve-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .serve-section .serve-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(37, 99, 235, 0.4);
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-
-    .serve-section .serve-card .card-title {
-      color: #fff;
-    }
-
-    .serve-section .serve-card .card-text {
-      color: rgba(255, 255, 255, 0.65);
-    }
-
-    .serve-section .serve-card .card-ico {
-      color: var(--electric-soft);
-      background: rgba(37, 99, 235, 0.15);
-    }
-
-    /* ============================================================
-   WHY CHOOSE (LIGHT)
-   ============================================================ */
-    .why {
-      position: relative;
-      background: var(--surface);
-      color: var(--ink);
-      overflow: hidden;
-    }
-
-    .why-grid-overlay {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: radial-gradient(ellipse 70% 60% at 70% 100%, #000, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 100%, #000, transparent 100%);
-      pointer-events: none;
-    }
-
-    .why .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .why-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .why-item {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .why-item:hover {
-      transform: translateY(-3px);
-      border-color: #c9d9f5;
-      box-shadow: var(--shadow-med);
-    }
-
-    .why-ico {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      margin-bottom: 16px;
-      color: var(--electric);
-      background: rgba(37, 99, 235, 0.08);
-      border: 1px solid rgba(37, 99, 235, 0.12);
-      border-radius: var(--radius);
-    }
-
-    .why-ico svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .why-item h3 {
-      font-family: var(--f-display);
-      font-weight: 600;
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-      color: var(--ink);
-    }
-
-    .why-item p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    /* ============================================================
-   FAQ
-   ============================================================ */
-    .faq {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .faq-item {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .faq-item.open {
-      border-color: #c9d9f5;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .faq-q {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 20px 22px;
-      text-align: left;
-      font-family: var(--f-display);
-      font-weight: 600;
-      font-size: 1.02rem;
-      color: var(--ink);
-    }
-
-    .faq-q:focus-visible {
-      outline: none;
-      box-shadow: inset 0 0 0 2px rgba(37, 99, 235, 0.4);
-    }
-
-    .faq-chev {
-      flex-shrink: 0;
-      color: var(--electric);
-      transition: transform .3s ease;
-      width: 20px;
-      height: 20px;
-    }
-
-    .faq-item.open .faq-chev {
-      transform: rotate(180deg);
-    }
-
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .35s ease;
-    }
-
-    .faq-a p {
-      padding: 0 22px 22px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* ============================================================
-   FINAL CTA
-   ============================================================ */
-    .final-cta {
-      position: relative;
-      background: linear-gradient(rgba(8, 11, 20, 0.85), rgba(8, 11, 20, 0.85));
-      color: #fff;
-      text-align: center;
-      padding: 90px 0;
-      overflow: hidden;
-    }
-
-    .final-cta-overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 120%, rgba(37, 99, 235, 0.4), transparent 55%);
-      pointer-events: none;
-    }
-
-    /* ============================================================
-   ROBOT ANIMATIONS (WHO WE SERVE SECTION)
-   ============================================================ */
-    .serve-section .robot-bg {
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.8;
-      pointer-events: none;
-      /* Rely on mask to blend edges since it's an image on a dark background */
-      mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
-      -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
-    }
-
-    .serve-section .robot-bg-tr {
-      top: -80px;
-      right: -60px;
-      animation: float-bot-tr 8s ease-in-out infinite alternate;
-    }
-
-    .serve-section .robot-bg-bl {
-      bottom: -80px;
-      left: -60px;
-      animation: float-bot-bl 9s ease-in-out infinite alternate-reverse;
-    }
-
-    @keyframes float-bot-tr {
-      0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-
-      100% {
-        transform: translate(-30px, 30px) rotate(15deg) scale(1.1);
-      }
-    }
-
-    @keyframes float-bot-bl {
-      0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-
-      100% {
-        transform: translate(30px, -30px) rotate(-15deg) scale(1.15);
-      }
-    }
-
-    .cta-bg-logo {
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      z-index: 0;
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .bg-logo-tr {
-      top: -80px;
-      right: -60px;
-      animation: float-tr 8s ease-in-out infinite alternate;
-    }
-
-    .bg-logo-bl {
-      bottom: -80px;
-      left: -60px;
-      animation: float-bl 9s ease-in-out infinite alternate-reverse;
-    }
-
-    @keyframes float-tr {
-      0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-
-      100% {
-        transform: translate(-30px, 30px) rotate(15deg) scale(1.1);
-      }
-    }
-
-    @keyframes float-bl {
-      0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-
-      100% {
-        transform: translate(30px, -30px) rotate(-15deg) scale(1.15);
-      }
-    }
-
-    .final-cta .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .final-cta-title {
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-    }
-
-    .final-cta-sub {
-      margin: 18px auto 32px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 1.08rem;
-      max-width: 560px;
-    }
-
-    /* ============================================================
-   CONTACT
-   ============================================================ */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 100%;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .contact-ico svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .contact-form-wrap {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      /* softer premium radius */
-      padding: 32px;
-      /* reduced from 34px */
-      box-shadow: 0 10px 40px -10px rgba(8, 11, 20, 0.08);
-      /* softer shadow */
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .field {
-      margin-bottom: 18px;
-    }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .field label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      padding: 10px 14px;
-      /* sleeker height */
-      font-size: 0.95rem;
-      color: var(--ink);
-      background: #f8fafc;
-      /* subtle gray background */
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      /* 8px radius for inputs */
-      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-
-    .field input::placeholder,
-    .field textarea::placeholder {
-      color: var(--muted-light);
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      outline: none;
-      background: var(--white);
-      border-color: var(--electric);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-      /* softer focus glow */
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 96px;
-    }
-
-    .field.invalid input,
-    .field.invalid select,
-    .field.invalid textarea {
-      border-color: #ef4444;
-      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
-    }
-
-    .field-error {
-      display: block;
-      min-height: 0;
-      color: #dc2626;
-      font-size: 0.78rem;
-      margin-top: 5px;
-    }
-
-    .select-wrap {
-      position: relative;
-    }
-
-    .select-wrap select {
-      appearance: none;
-      -webkit-appearance: none;
-      padding-right: 40px;
-      cursor: pointer;
-    }
-
-    .select-chev {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--muted);
-      pointer-events: none;
-      width: 18px;
-      height: 18px;
-    }
-
-    .form-note {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    .form-note svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    /* ============================================================
-   FOOTER
-   ============================================================ */
-    .site-footer {
-      background: var(--navy);
-      color: rgba(255, 255, 255, 0.66);
-      padding: 64px 0 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.95fr 0.7fr 1.5fr;
-      gap: 40px;
-      padding-bottom: 48px;
-    }
-
-    .brand-footer {
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .footer-desc {
-      font-size: 0.9rem;
-      max-width: 320px;
-      line-height: 1.65;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .social {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-      color: rgba(255, 255, 255, 0.7);
-      transition: background .2s ease, color .2s ease, border-color .2s ease;
-    }
-
-    .social:hover {
-      background: var(--electric);
-      color: #fff;
-      border-color: var(--electric);
-    }
-
-    .social svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    .footer-col h4 {
-      color: #fff;
-      font-family: var(--f-display);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
-    }
-
-    .footer-col a {
-      display: block;
-      padding: 6px 0;
-      font-size: 0.9rem;
-      transition: color .18s ease;
-    }
-
-    .footer-col a:hover {
-      color: #93b4ff;
-    }
-
-    /* ---- Footer: location / phone ---- */
-    .footer-visit {
-      max-width: 340px;
-    }
-
-    .footer-address {
-      font-style: normal;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .footer-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    /* Circular outlined icon badge */
-    .footer-ico {
-      display: grid;
-      place-items: center;
-      width: 50px;
-      height: 50px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 50%;
-      color: var(--electric-soft);
-      transition: border-color .22s ease, background .22s ease;
-    }
-
-    .footer-item:hover .footer-ico {
-      border-color: rgba(59, 130, 246, 0.55);
-      background: rgba(59, 130, 246, 0.08);
-    }
-
-    .footer-ico svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .footer-item-body {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-width: 0;
-    }
-
-    .footer-label {
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
-      color: var(--electric-soft);
-    }
-
-    .footer-value {
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.66);
-    }
-
-    .footer-col a.footer-value {
-      display: inline;
-      padding: 0;
-      transition: color .18s ease;
-    }
-
-    .footer-col a.footer-value:hover {
-      color: #fff;
-    }
-
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 22px 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.82rem;
-    }
-
-    /* ============================================================
-   REVEAL ANIMATION
-   ============================================================ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .reveal.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ============================================================
-   RESPONSIVE
-   ============================================================ */
-    @media (max-width: 1024px) {
-
-      .serve-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-list {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-inner {
-        gap: 40px;
-      }
-
-      .hero-actions {
-        margin-top: 52px;
-        margin-bottom: 56px;
-      }
-
-      .trust {
-        padding: 28px 0;
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 36px 32px;
-      }
-
-      .footer-brand,
-      .footer-visit {
-        grid-column: 1 / -1;
-      }
-
-      .footer-visit {
-        max-width: none;
-      }
-
-      /* Full-width column: put Location and Phone side by side */
-      .footer-address {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px 32px;
-      }
-    }
-
-    @media (max-width: 860px) {
-
-      .main-nav,
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-toggle {
-        display: flex;
-      }
-
-      /* Scale buttons down for tablet */
-      .btn {
-        font-size: 0.72rem;
-        padding: 7px 14px;
-        gap: 7px;
-      }
-
-      .btn-sm {
-        padding: 6px 12px;
-        font-size: 0.7rem;
-      }
-
-      .btn-ico {
-        width: 13px;
-        height: 13px;
-      }
-
-      /* Hero CTAs — reference pill proportions, tablet scale */
-      .hero-actions .btn,
-      .final-cta-actions .btn {
-        min-width: 188px;
-        height: 56px;
-        padding: 0 24px;
-        font-size: 0.9rem;
-      }
-
-      .hero-actions .btn .btn-ico,
-      .final-cta-actions .btn .btn-ico {
-        width: 16px;
-        height: 16px;
-      }
-
-      /* Smaller hamburger */
-      .nav-toggle {
-        width: 26px;
-        height: 26px;
-        gap: 3px;
-      }
-
-      .nav-toggle span {
-        width: 15px;
-      }
-
-      .nav-toggle.open span:nth-child(1) {
-        transform: translateY(5px) rotate(45deg);
-      }
-
-      .nav-toggle.open span:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg);
-      }
-
-      .mobile-cta {
-        font-size: 0.76rem;
-        padding: 8px 22px;
-        gap: 7px;
-      }
-
-      .chat-cta {
-        font-size: 0.72rem;
-        padding: 9px 15px;
-        gap: 7px;
-      }
-
-      .chat-cta .btn-ico {
-        width: 13px;
-        height: 13px;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
-      .hero {
-        padding: 90px 0 0;
-        min-height: 100vh;
-        min-height: 100dvh;
-      }
-
-      .hero-inner {
-        margin-top: 4vh;
-      }
-
-      .hero-title {
-        margin-bottom: 18px;
-      }
-
-      .hero-sub {
-        max-width: 560px;
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .hero-actions {
-        margin-top: 46px;
-        margin-bottom: 52px;
-      }
-
-      .trust-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-
-      .trust-item {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
-
-      .footer-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 32px 24px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        padding: 0 18px;
-      }
-      .serve-grid,
-      .why-list {
-        grid-template-columns: 1fr;
-      }
-
-      .field-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      /* Scale buttons down further for mobile */
-      .btn {
-        font-size: 0.72rem;
-        padding: 7px 14px;
-        gap: 7px;
-      }
-
-      .btn-sm {
-        padding: 6px 12px;
-        font-size: 0.7rem;
-      }
-
-      .btn-ico {
-        width: 13px;
-        height: 13px;
-      }
-
-      /* Hero CTAs sized to reference: 176 x 53px pill */
-      .hero-actions .btn,
-      .final-cta-actions .btn {
-        width: auto;
-        min-width: 176px;
-        height: 53px;
-        padding: 0 22px;
-        font-size: 0.85rem;
-        border-radius: 9999px;
-      }
-
-      .hero-actions .btn .btn-ico,
-      .final-cta-actions .btn .btn-ico {
-        width: 15px;
-        height: 15px;
-      }
-
-      .mobile-cta {
-        font-size: 0.76rem;
-        padding: 8px 22px;
-        gap: 7px;
-      }
-
-      .hero-actions{
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Smaller hamburger */
-      .nav-toggle {
-        width: 26px;
-        height: 26px;
-        gap: 3px;
-      }
-
-      .nav-toggle span {
-        width: 15px;
-      }
-
-      .nav-toggle.open span:nth-child(1) {
-        transform: translateY(5px) rotate(45deg);
-      }
-
-      .nav-toggle.open span:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg);
-      }
-
-      .chat-cta {
-        font-size: 0.72rem;
-        padding: 9px 15px;
-        gap: 7px;
-      }
-
-      .chat-cta .btn-ico {
-        width: 13px;
-        height: 13px;
-      }
-
-      .hero-title {
-        margin-bottom: 16px;
-      }
-
-      .hero-sub {
-        font-size: 0.92rem;
-        line-height: 1.6;
-      }
-
-      .hero-actions {
-        gap: 14px;
-        margin-top: 40px;
-        margin-bottom: 48px;
-      }
-
-      .contact-form-wrap {
-        padding: 24px 20px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px 20px;
-      }
-
-      /* Single column again once the card is narrow */
-      .footer-address {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .footer-ico {
-        width: 44px;
-        height: 44px;
-      }
-
-      .footer-ico svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      .footer-item {
-        gap: 14px;
-      }
-
-      .footer-label {
-        font-size: 0.95rem;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 18px;
-      }
-
-      /* Keep dropdown menus on-screen on small viewports */
-      .dropdown-menu {
-        left: auto;
-        right: 0;
-        transform: translateY(10px) scale(0.96);
-        transform-origin: top right;
-      }
-
-      .dropdown-menu.show {
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    /* ============================================================
-   ACCESSIBILITY
-   ============================================================ */
-    :focus-visible {
-      outline: 2px solid var(--electric);
-      outline-offset: 2px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.001ms !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    /* ============================================================
-   CHAT INTERFACE (SERVICES)
-   ============================================================ */
-    .chat-window {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-med);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .chat-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: var(--navy);
-      background-image: radial-gradient(circle at 80% 0%, rgba(37, 99, 235, 0.28), transparent 55%);
-    }
-
-    .chat-header .chat-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .chat-header .chat-dots i {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .chat-header .chat-dots i:nth-child(1) {
-      background: #ef4444;
-    }
-
-    .chat-header .chat-dots i:nth-child(2) {
-      background: #f59e0b;
-    }
-
-    .chat-header .chat-dots i:nth-child(3) {
-      background: #22c55e;
-    }
-
-    .chat-body {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      background: var(--surface);
-      background-image: radial-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px);
-      background-size: 20px 20px;
-    }
-
-    .chat-bubble {
-      position: relative;
-      padding: 24px 28px;
-      border-radius: 24px;
-      max-width: 85%;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .chat-content {
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-    }
-
-    .chat-left {
-      align-self: flex-start;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-bottom-left-radius: 6px;
-    }
-
-    .chat-left::before {
-      content: "";
-      position: absolute;
-      bottom: 24px;
-      left: -8px;
-      width: 16px;
-      height: 16px;
-      background: var(--white);
-      border-left: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      transform: rotate(45deg);
-      border-bottom-left-radius: 4px;
-    }
-
-    .chat-right {
-      align-self: flex-end;
-      background: var(--navy);
-      color: #fff;
-      border: 1px solid var(--navy);
-      border-bottom-right-radius: 6px;
-      box-shadow: 0 10px 30px -10px rgba(8, 11, 20, 0.4);
-    }
-
-    .chat-right .card-title {
-      color: #fff;
-    }
-
-    .chat-right .card-text {
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .chat-right .card-ico {
-      background: rgba(37, 99, 235, 0.25);
-      border-color: rgba(96, 165, 250, 0.4);
-      color: #ffffff;
-      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .chat-right::before {
-      content: "";
-      position: absolute;
-      bottom: 24px;
-      right: -8px;
-      width: 16px;
-      height: 16px;
-      background: var(--navy);
-      border-right: 1px solid var(--navy);
-      border-top: 1px solid var(--navy);
-      transform: rotate(45deg);
-      border-top-right-radius: 4px;
-    }
-
-    .chat-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 0.88rem;
-      background: var(--electric);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 99px;
-      text-decoration: none;
-      font-weight: 600;
-      text-align: center;
-      white-space: normal;
-      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
-      align-self: center;
-      margin-top: 16px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .chat-cta .btn-ico {
-      width: 16px;
-      height: 16px;
-    }
-
-    .chat-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.5);
-    }
-
-    @media (max-width: 768px) {
-      .chat-body {
-        padding: 24px 16px;
-        gap: 24px;
-      }
-
-      .chat-bubble {
-        max-width: 95%;
-        padding: 20px;
-      }
-
-      .chat-content {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .chat-content .card-ico {
-        margin-bottom: 0;
-      }
-    }
-
-    /* ============================================================
-   MODAL
-   ============================================================ */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(8, 11, 20, 0.7);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 1000;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 24px;
-      overflow-y: auto;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .modal-overlay.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal-dialog {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: auto;
-      transform: translateY(20px) scale(0.95);
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .modal-overlay.open .modal-dialog {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-content {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 32px 64px -16px rgba(8, 11, 20, 0.35);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 30px;
-      height: 30px;
-      display: grid;
-      place-items: center;
-      background: rgba(8, 11, 20, 0.05);
-      border-radius: 50%;
-      color: var(--ink);
-      z-index: 10;
-      cursor: pointer;
-      border: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .modal-close:hover {
-      background: rgba(8, 11, 20, 0.1);
-      color: #ef4444;
-    }
-
-    .modal-close svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    .modal-title {
-      font-family: var(--f-display);
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 4px;
-      color: var(--ink);
-    }
-
-    .modal-lead {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 560px) {
-      .modal-content {
-        padding: 20px 16px;
-      }
-    }
-  </style>
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔎</text></svg>">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- SEO Tags -->
   <meta name="keywords"
     content="digital investigation, mobile forensics, data recovery, cyber investigation, fraud investigation, email investigation, secure evidence handling">
@@ -2359,17 +158,22 @@
     <div class="container header-inner">
       <a href="#home" class="brand" aria-label="Apex Tech home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 100 100" width="40" height="40" fill="none">
-            <defs>
-              <linearGradient id="logoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-                <stop offset="0%" stop-color="var(--electric-soft)" />
-                <stop offset="100%" stop-color="var(--blue)" />
-              </linearGradient>
-            </defs>
-            <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-              stroke="url(#logoGrad)" stroke-width="12" stroke-linecap="round" />
-            <circle cx="45" cy="50" r="7" class="logo-eye" />
-            <circle cx="68" cy="52" r="4.5" class="logo-eye" />
+          <svg class="bot" viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+            <g class="bot-rise">
+              <g class="bot-antenna">
+                <circle class="bot-body" cx="50" cy="18" r="6" />
+                <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+              </g>
+              <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+              <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+              <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+              <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+              <g class="bot-eyes">
+                <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+                <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+              </g>
+              <path class="bot-body" d="M44 59q6 11 12 0Z" />
+            </g>
           </svg>
         </span>
         <span class="brand-word">Apex <span class="brand-accent">Tech</span></span>
@@ -2379,6 +183,7 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#about" class="nav-link">About</a>
+        <a href="#awareness" class="nav-link">Awareness</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -2398,17 +203,22 @@
       <div class="mobile-nav-header">
         <a href="#home" class="mobile-brand" aria-label="Apex Tech home">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 100 100" width="40" height="40" fill="none">
-              <defs>
-                <linearGradient id="mobileLogoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-                  <stop offset="0%" stop-color="var(--electric-soft)" />
-                  <stop offset="100%" stop-color="var(--blue)" />
-                </linearGradient>
-              </defs>
-              <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-                stroke="url(#mobileLogoGrad)" stroke-width="12" stroke-linecap="round" />
-              <circle cx="45" cy="50" r="7" fill="#fff" />
-              <circle cx="68" cy="52" r="4.5" fill="#fff" />
+            <svg class="bot" viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+              <g class="bot-rise">
+                <g class="bot-antenna">
+                  <circle class="bot-body" cx="50" cy="18" r="6" />
+                  <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+                </g>
+                <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+                <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+                <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+                <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+                <g class="bot-eyes">
+                  <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+                  <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+                </g>
+                <path class="bot-body" d="M44 59q6 11 12 0Z" />
+              </g>
             </svg>
           </span>
           <span>Apex <span class="brand-accent">Tech</span></span>
@@ -2423,6 +233,7 @@
         <a href="#home" class="mobile-link">Home</a>
         <a href="#services" class="mobile-link">Services</a>
         <a href="#about" class="mobile-link">About</a>
+        <a href="#awareness" class="mobile-link">Awareness</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="mobile-link">Contact</a>
       </div>
@@ -2430,6 +241,7 @@
         <a href="javascript:void(0)" onclick="openModal(event)" class="mobile-cta">Request a Consultation</a>
       </div>
     </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   </header>
 
   <main id="home" tabindex="-1">
@@ -2439,24 +251,40 @@
       <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
 
       <!-- Animated Background Logos -->
-      <svg class="cta-bg-logo bg-logo-tr" viewBox="0 0 100 100" fill="none">
-        <defs>
-          <linearGradient id="heroLogoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-            <stop offset="0%" stop-color="rgba(37, 99, 235, 0.6)" />
-            <stop offset="100%" stop-color="rgba(29, 78, 216, 0.1)" />
-          </linearGradient>
-        </defs>
-        <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-          stroke="url(#heroLogoGrad)" stroke-width="12" stroke-linecap="round" />
-        <circle cx="45" cy="50" r="7" fill="rgba(255,255,255,0.25)" />
-        <circle cx="68" cy="52" r="4.5" fill="rgba(255,255,255,0.25)" />
+      <svg class="cta-bg-logo bg-logo-tr bot" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="bot-rise">
+          <g class="bot-antenna">
+            <circle class="bot-body" cx="50" cy="18" r="6" />
+            <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+          </g>
+          <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <g class="bot-eyes">
+            <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+            <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+          </g>
+          <path class="bot-body" d="M44 59q6 11 12 0Z" />
+        </g>
       </svg>
 
-      <svg class="cta-bg-logo bg-logo-bl" viewBox="0 0 100 100" fill="none">
-        <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-          stroke="url(#heroLogoGrad)" stroke-width="12" stroke-linecap="round" />
-        <circle cx="45" cy="50" r="7" fill="rgba(255,255,255,0.25)" />
-        <circle cx="68" cy="52" r="4.5" fill="rgba(255,255,255,0.25)" />
+      <svg class="cta-bg-logo bg-logo-bl bot" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="bot-rise">
+          <g class="bot-antenna">
+            <circle class="bot-body" cx="50" cy="18" r="6" />
+            <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+          </g>
+          <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <g class="bot-eyes">
+            <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+            <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+          </g>
+          <path class="bot-body" d="M44 59q6 11 12 0Z" />
+        </g>
       </svg>
 
       <div class="container hero-inner">
@@ -2673,6 +501,94 @@
 
 
 
+    <!-- ============ UNDERSTANDING NARCISSISTIC ABUSE ============ -->
+    <section class="section narc" id="awareness">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span>Pattern Recognition</span>
+          <h2 class="section-title title-light">Understanding Narcissistic Abuse</h2>
+          <p class="section-lead lead-light">Many of the people who come to us are not chasing a device. They are
+            trying to make sense of a pattern. These are the behaviours that show up again and again.</p>
+        </div>
+
+        <div class="narc-grid">
+
+          <article class="narc-card is-featured reveal">
+            <span class="narc-num">01</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Real Goal</p>
+            <p class="narc-text"><strong>Narcissists don&rsquo;t want love.</strong> They want attention. If they
+              can&rsquo;t get positive attention, they will take negative attention. If they can&rsquo;t have your
+              admiration, they will accept your rage. But they must provoke some response from you. That is their goal:
+              <strong>to provoke a response, any response.</strong> It solidifies, in their minds, their power
+              over you, that they are calling the shots, that you are weak, or gullible, or easily manipulated, or
+              vulnerable, or whatever they have labeled you in their mind that means you are &ldquo;less&rdquo;, less
+              than them.</p>
+            <p class="narc-cite">Kellen Vonhouser</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">02</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Kindness Trap</p>
+            <p class="narc-text">Narcissists often pause their abuse with intermittent periods of seeming kindness and
+              warmth. This causes you to become trauma-bonded to them, constantly trying to make them happy. Then, when
+              they turn abusive again, you may believe you deserve it.</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">03</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Denial Ladder</p>
+            <p class="narc-text">A narcissist&rsquo;s mindset: &ldquo;That didn&rsquo;t happen. And if it did, it
+              wasn&rsquo;t that bad. And if it was, it&rsquo;s not a big deal. And if it is, I don&rsquo;t believe
+              it&rsquo;s my fault. And if it was, I didn&rsquo;t mean it. And if I did, you made me do it.&rdquo;</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">04</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">Weaponised Empathy</p>
+            <p class="narc-text">Narcissists will use your goodness against you by playing on your emotions. They will
+              use your compassion, empathy, guilt or kindness to get what they want from you. Narcissists are not above
+              crying uncontrollably, feigning illness, even threatening suicide, to manipulate, deceive and regain
+              control of you.</p>
+            <p class="narc-cite">Maria Consiglio, @Understandingthenarc</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">05</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Slow Drain</p>
+            <p class="narc-text">Narcissists want you to give up everything, and once you have, they&rsquo;ll up and
+              leave you with nothing.</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">06</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Enablers</p>
+            <p class="narc-text">Narcissists only surround themselves with people who enable their behavior, ignore
+              their behavior or encourage their behavior. Anyone who tries to hold them accountable will be accused and
+              blamed of the exact things the narcissist is guilty of. And the people who know the truth, will remain
+              silent.</p>
+          </article>
+
+          <article class="narc-card reveal">
+            <span class="narc-num">07</span>
+            <span class="narc-mark" aria-hidden="true">&ldquo;</span>
+            <p class="narc-kicker">The Anger Setup</p>
+            <p class="narc-text">The narcissist&rsquo;s favourite gaslighting abuse tactic is to set you up to be angry
+              and then shame you for the anger, it&rsquo;s practically a form of entertainment for them.</p>
+          </article>
+
+        </div>
+
+        <p class="narc-foot reveal">Recognise any of this? A clear, documented record changes the conversation.
+          <a href="#contact" data-reach>Speak to an investigator</a>.</p>
+      </div>
+    </section>
+
     <!-- ============ WHY CHOOSE (LIGHT) ============ -->
     <section class="section why" id="about">
       <div class="why-grid-overlay" aria-hidden="true"></div>
@@ -2792,24 +708,40 @@
       <div class="final-cta-overlay" aria-hidden="true"></div>
 
       <!-- Animated Background Logos -->
-      <svg class="cta-bg-logo bg-logo-tr" viewBox="0 0 100 100" fill="none">
-        <defs>
-          <linearGradient id="ctaLogoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-            <stop offset="0%" stop-color="rgba(37, 99, 235, 0.6)" />
-            <stop offset="100%" stop-color="rgba(29, 78, 216, 0.1)" />
-          </linearGradient>
-        </defs>
-        <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-          stroke="url(#ctaLogoGrad)" stroke-width="12" stroke-linecap="round" />
-        <circle cx="45" cy="50" r="7" fill="rgba(255,255,255,0.25)" />
-        <circle cx="68" cy="52" r="4.5" fill="rgba(255,255,255,0.25)" />
+      <svg class="cta-bg-logo bg-logo-tr bot" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="bot-rise">
+          <g class="bot-antenna">
+            <circle class="bot-body" cx="50" cy="18" r="6" />
+            <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+          </g>
+          <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <g class="bot-eyes">
+            <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+            <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+          </g>
+          <path class="bot-body" d="M44 59q6 11 12 0Z" />
+        </g>
       </svg>
 
-      <svg class="cta-bg-logo bg-logo-bl" viewBox="0 0 100 100" fill="none">
-        <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-          stroke="url(#ctaLogoGrad)" stroke-width="12" stroke-linecap="round" />
-        <circle cx="45" cy="50" r="7" fill="rgba(255,255,255,0.25)" />
-        <circle cx="68" cy="52" r="4.5" fill="rgba(255,255,255,0.25)" />
+      <svg class="cta-bg-logo bg-logo-bl bot" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="bot-rise">
+          <g class="bot-antenna">
+            <circle class="bot-body" cx="50" cy="18" r="6" />
+            <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+          </g>
+          <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+          <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <g class="bot-eyes">
+            <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+            <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+          </g>
+          <path class="bot-body" d="M44 59q6 11 12 0Z" />
+        </g>
       </svg>
 
       <div class="container reveal">
@@ -2833,6 +765,7 @@
             <form class="contact-form" id="contactForm" novalidate>
               <input type="checkbox" name="botcheck" class="hidden">
               <input type="hidden" name="form_started" value="" class="ft-started">
+              <input type="hidden" name="autoresponse" value="Thank you for contacting Apex Tech. We have received your inquiry and will be in touch within 24 hours. — The Apex Tech Team">
               <div class="ft-turnstile"></div>
               <div class="field-row">
                 <div class="field">
@@ -2847,17 +780,10 @@
                 </div>
               </div>
 
-              <div class="field-row">
-                <div class="field">
-                  <label for="cf-email">Email Address</label>
-                  <input type="email" id="cf-email" name="email" autocomplete="email" required />
-                  <span class="field-error" data-for="cf-email"></span>
-                </div>
-                <div class="field">
-                  <label for="cf-cemail">Confirm Email</label>
-                  <input type="email" id="cf-cemail" name="confirm_email" autocomplete="email" required />
-                  <span class="field-error" data-for="cf-cemail"></span>
-                </div>
+              <div class="field">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" required />
+                <span class="field-error" data-for="cf-email"></span>
               </div>
 
               <div class="field">
@@ -2893,16 +819,18 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-block" disabled
-                style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">Submit Inquiry
-                <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">
+                <span class="btn-label">Submit Inquiry</span>
+                <svg class="btn-ico btn-ico-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="m22 2-7 20-4-9-9-4Z" />
                   <path d="M22 2 11 13" />
                 </svg>
+                <svg class="btn-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M12 2a10 10 0 0 1 10 10" />
+                </svg>
               </button>
-              <div class="form-success-msg"
-                style="display: none; margin-top: 16px; text-align: center; color: #16a34a; font-weight: 500;">Thank
-                You, Will be in touch shortly.</div>
+              <div class="form-success-msg" aria-live="polite"></div>
               <p class="form-note"><span aria-hidden="true" data-lucide="lock"></span> Your information will be treated with
                 confidentiality.
               </p>
@@ -2920,17 +848,22 @@
       <div class="footer-brand">
         <a href="#home" class="brand brand-footer">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 100 100" width="36" height="36" fill="none">
-              <defs>
-                <linearGradient id="footerLogoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-                  <stop offset="0%" stop-color="var(--electric-soft)" />
-                  <stop offset="100%" stop-color="var(--blue)" />
-                </linearGradient>
-              </defs>
-              <path d="M 50 65 C 25 65, 25 35, 45 35 C 65 35, 85 35, 80 50 C 75 75, 25 75, 15 50 C 5 20, 60 5, 80 25"
-                stroke="url(#footerLogoGrad)" stroke-width="12" stroke-linecap="round" />
-              <circle cx="45" cy="50" r="7" fill="#fff" />
-              <circle cx="68" cy="52" r="4.5" fill="#fff" />
+            <svg class="bot" viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+              <g class="bot-rise">
+                <g class="bot-antenna">
+                  <circle class="bot-body" cx="50" cy="18" r="6" />
+                  <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+                </g>
+                <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+                <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+                <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+                <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+                <g class="bot-eyes">
+                  <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+                  <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+                </g>
+                <path class="bot-body" d="M44 59q6 11 12 0Z" />
+              </g>
             </svg>
           </span>
           <span class="brand-word">Apex <span class="brand-accent">Tech</span></span>
@@ -3014,6 +947,88 @@
   </footer>
 
   <!-- ============ CONSULTATION MODAL ============ -->
+  <!-- ============ MOBILE ACTION BAR ============ -->
+  <div class="action-bar" id="actionBar">
+    <a class="action-btn is-wa" href="https://wa.me/13436350317" target="_blank" rel="noopener noreferrer"
+      data-contact="whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+      WhatsApp
+    </a>
+    <a class="action-btn" href="tel:+13436350317" data-contact="phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+      </svg>
+      Call
+    </a>
+    <button class="action-btn is-primary" type="button" onclick="openModal(event)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+      Consultation
+    </button>
+  </div>
+
+  <!-- ============ REACH-OUT MODAL (WhatsApp / Telegram) ============ -->
+  <div id="reachModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reachModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close" onclick="closeReach()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+        <h3 class="modal-title" id="reachModalTitle">Speak to an investigator</h3>
+        <p class="modal-lead">Message us directly. Every conversation is confidential.</p>
+
+        <div class="reach-list">
+          <a class="reach-option" href="https://wa.me/13436350317" target="_blank" rel="noopener noreferrer"
+            data-contact="whatsapp">
+            <span class="reach-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#25D366">
+                <path d="M11.42 0H11.4C5.1 0 0 5.1 0 11.4c0 2.01.52 3.93 1.51 5.64L.07 22.84l5.95-1.56c1.66.95 3.52 1.45 5.4 1.45 6.3 0 11.4-5.1 11.4-11.4S17.7 0 11.4 0zm0 20.84c-1.77 0-3.5-.47-5.01-1.37l-.36-.21-3.72.98.99-3.63-.23-.37a9.38 9.38 0 0 1-1.46-5.14c0-5.26 4.28-9.54 9.54-9.54 2.55 0 4.95 1 6.74 2.8 1.8 1.8 2.79 4.19 2.79 6.74 0 5.25-4.28 9.53-9.54 9.53zm5.22-7.14c-.29-.15-1.71-.84-1.98-.94-.26-.09-.45-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.2-.29.29-.49.09-.2.05-.37-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.26.29-1 .98-1 2.39s1.02 2.77 1.17 2.97c.14.2 2.03 3.1 4.91 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.09 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.07-.12-.27-.19-.56-.34z" />
+              </svg>
+            </span>
+            <span class="reach-body">
+              <span class="reach-name">WhatsApp</span>
+              <span class="reach-meta">+1 (343) 635-0317</span>
+            </span>
+            <svg class="reach-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+
+          <a class="reach-option" href="https://t.me/Apextechforensics" target="_blank" rel="noopener noreferrer"
+            data-contact="telegram">
+            <span class="reach-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#2AABEE">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+              </svg>
+            </span>
+            <span class="reach-body">
+              <span class="reach-name">Telegram</span>
+              <span class="reach-meta">@Apextechforensics</span>
+            </span>
+            <svg class="reach-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="consultationModal" class="modal-overlay" role="dialog" aria-modal="true"
     aria-labelledby="consultationModalTitle" aria-hidden="true">
     <div class="modal-dialog">
@@ -3031,6 +1046,7 @@
         <form class="contact-form" id="modalForm" novalidate>
           <input type="checkbox" name="botcheck" class="hidden">
               <input type="hidden" name="form_started" value="" class="ft-started">
+              <input type="hidden" name="autoresponse" value="Thank you for contacting Apex Tech. We have received your consultation request and will be in touch within 24 hours. — The Apex Tech Team">
               <div class="ft-turnstile"></div>
           <div class="field-row">
             <div class="field">
@@ -3045,17 +1061,10 @@
             </div>
           </div>
 
-          <div class="field-row">
-            <div class="field">
-              <label for="mf-email">Email Address</label>
-              <input type="email" id="mf-email" name="email" autocomplete="email" required />
-              <span class="field-error" data-for="mf-email"></span>
-            </div>
-            <div class="field">
-              <label for="mf-cemail">Confirm Email</label>
-              <input type="email" id="mf-cemail" name="confirm_email" autocomplete="email" required />
-              <span class="field-error" data-for="mf-cemail"></span>
-            </div>
+          <div class="field">
+            <label for="mf-email">Email Address</label>
+            <input type="email" id="mf-email" name="email" autocomplete="email" required />
+            <span class="field-error" data-for="mf-email"></span>
           </div>
 
           <div class="field">
@@ -3091,10 +1100,18 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-block" disabled
-            style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">Submit Request</button>
-          <div class="form-success-msg"
-            style="display: none; margin-top: 16px; text-align: center; color: #16a34a; font-weight: 500;">Thank You,
-            Will be in touch shortly.</div>
+            style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">
+            <span class="btn-label">Submit Request</span>
+            <svg class="btn-ico btn-ico-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+            <svg class="btn-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 2a10 10 0 0 1 10 10" />
+            </svg>
+          </button>
+          <div class="form-success-msg" aria-live="polite"></div>
         </form>
       </div>
     </div>
@@ -3202,6 +1219,107 @@
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
+      /* ---------- Reading progress bar ---------- */
+      const progress = document.getElementById('scrollProgress');
+      if (progress) {
+        let ticking = false;
+        const drawProgress = () => {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+          progress.style.transform = 'scaleX(' + pct + ')';
+          ticking = false;
+        };
+        drawProgress();
+        window.addEventListener('scroll', () => {
+          // one paint per frame, never one per scroll event
+          if (!ticking) { ticking = true; requestAnimationFrame(drawProgress); }
+        }, { passive: true });
+        window.addEventListener('resize', drawProgress, { passive: true });
+      }
+
+      /* ---------- Mobile action bar ---------- */
+      (function () {
+        const bar = document.getElementById('actionBar');
+        if (!bar) return;
+
+        const hero = document.querySelector('.hero');
+        const contact = document.getElementById('contact');
+        const footer = document.querySelector('.site-footer, .page-footer, footer');
+
+        let pastHero = false;
+        let overContact = false;
+        const sync = () => bar.classList.toggle('show', pastHero && !overContact);
+
+        if ('IntersectionObserver' in window && hero) {
+          new IntersectionObserver(([en]) => {
+            pastHero = !en.isIntersecting;
+            sync();
+          }, { threshold: 0 }).observe(hero);
+
+          // hide over the real form and the footer so it never covers them
+          const zones = [contact, footer].filter(Boolean);
+          if (zones.length) {
+            const seen = new Set();
+            const zoneObs = new IntersectionObserver((entries) => {
+              entries.forEach((en) => {
+                if (en.isIntersecting) seen.add(en.target);
+                else seen.delete(en.target);
+              });
+              overContact = seen.size > 0;
+              sync();
+            }, { threshold: 0 });
+            zones.forEach((z) => zoneObs.observe(z));
+          }
+        } else {
+          bar.classList.add('show');
+        }
+
+        // never let the bar sit on top of an open dialog
+        const dialogs = ['consultationModal', 'reachModal']
+          .map((id) => document.getElementById(id)).filter(Boolean);
+        if (dialogs.length && 'MutationObserver' in window) {
+          const mo = new MutationObserver(() => {
+            const anyOpen = dialogs.some((d) => d.classList.contains('open'));
+            bar.style.visibility = anyOpen ? 'hidden' : '';
+          });
+          dialogs.forEach((d) => mo.observe(d, { attributes: true, attributeFilter: ['class'] }));
+        }
+      })();
+
+      /* ---------- Scroll-spy: highlight the section you are reading ---------- */
+      (function () {
+        const links = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+        if (!links.length || !('IntersectionObserver' in window)) return;
+
+        const map = new Map();
+        links.forEach((a) => {
+          const sec = document.querySelector(a.getAttribute('href'));
+          if (sec) map.set(sec, a);
+        });
+        if (!map.size) return;
+
+        const visible = new Set();
+        const setActive = () => {
+          // topmost visible section wins, so overlapping sections cannot fight
+          let best = null;
+          visible.forEach((sec) => {
+            if (!best || sec.getBoundingClientRect().top < best.getBoundingClientRect().top) best = sec;
+          });
+          links.forEach((a) => a.classList.remove('active'));
+          if (best && map.get(best)) map.get(best).classList.add('active');
+        };
+
+        const spy = new IntersectionObserver((entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) visible.add(en.target);
+            else visible.delete(en.target);
+          });
+          setActive();
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+        map.forEach((_a, sec) => spy.observe(sec));
+      })();
+
       /* ---------- Mobile nav ---------- */
       const toggle = document.getElementById('navToggle');
       const mobileNav = document.getElementById('mobileNav');
@@ -3258,13 +1376,26 @@
       /* ---------- Scroll reveal ---------- */
       const reveals = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window) {
+        /* Stagger from the element's position among its reveal siblings.
+           The old version used the IntersectionObserver batch index, which
+           varies with scroll speed, so the same row animated differently
+           every time. This is stable: a card is always the Nth in its grid. */
+        reveals.forEach((el) => {
+          // authored transition-delay wins; don't double up on it
+          if (el.style && el.style.transitionDelay) { el.dataset.revealStep = '0'; return; }
+          const parent = el.parentElement;
+          const group = parent
+            ? Array.from(parent.children).filter((c) => c.classList.contains('reveal'))
+            : [el];
+          el.dataset.revealStep = String(Math.min(Math.max(group.indexOf(el), 0), 5));
+        });
+
         const io = new IntersectionObserver((entries, obs) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              // subtle stagger within a group
-              setTimeout(() => entry.target.classList.add('in'), (i % 4) * 70);
-              obs.unobserve(entry.target);
-            }
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const step = parseInt(entry.target.dataset.revealStep || '0', 10);
+            setTimeout(() => entry.target.classList.add('in'), step * 70);
+            obs.unobserve(entry.target);
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
         reveals.forEach((el) => io.observe(el));
@@ -3273,10 +1404,20 @@
       }
 
       /* ---------- Contact form validation & Web3Forms ---------- */
+      const checkSvg = '<svg class="field-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
       const setError = (input, msg) => {
         const field = input.closest('.field');
+        if (!field) return;
         const err = field.querySelector('.field-error');
+        // Inject checkmark if not present
+        if (!field.querySelector('.field-check')) {
+          field.insertAdjacentHTML('beforeend', checkSvg);
+        }
         field.classList.toggle('invalid', !!msg);
+        // Mark valid only if value is present and no error
+        const hasValue = input.value && input.value.trim().length > 0;
+        field.classList.toggle('valid', !msg && hasValue);
         if (err) err.textContent = msg || '';
         if (msg) input.setAttribute('aria-invalid', 'true');
         else input.removeAttribute('aria-invalid');
@@ -3296,13 +1437,8 @@
           case 'email':
             if (!v) return 'Please enter your email address.';
             return isEmail(v) ? '' : 'Enter a valid email address.';
-          case 'cemail': {
-            if (!v) return 'Please confirm your email address.';
-            const prefix = input.id.split('-')[0]; // e.g. 'cf' or 'mf'
-            const emailInput = document.getElementById(prefix + '-email');
-            const emailVal = emailInput ? emailInput.value.trim() : '';
-            return v === emailVal ? '' : 'Email addresses do not match.';
-          }
+          case 'cemail':
+            return ''; // confirm email field removed
           case 'phone':
             if (!v) return 'Please enter a phone number.';
             return isPhone(v) ? '' : 'Enter a valid phone number.';
@@ -3320,12 +1456,10 @@
       const showFailure = (form, msg) => {
         const box = form.querySelector('.form-success-msg');
         if (!box) return;
-        box.style.color = '#dc2626';
+        box.className = 'form-success-msg is-error';
         box.innerHTML = msg + ' You can also <a href="https://wa.me/13436350317?text=' +
           encodeURIComponent('Hi Apex Tech, I tried to send an enquiry through your website but it did not go through.') +
-          '" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" ' +
-          'style="color:#2563EB;text-decoration:underline;">message us on WhatsApp</a>.';
-        box.style.display = 'block';
+          '" target="_blank" rel="noopener noreferrer" data-contact="whatsapp">message us on WhatsApp</a>.';
       };
 
       const setupForm = (formId) => {
@@ -3338,12 +1472,9 @@
         const checkFormValidity = () => {
           let isValid = true;
           fields.forEach(input => {
-            if (input.name !== 'message' && input.name !== 'confirm_email' && validateField(input) !== '') {
-              isValid = false;
-            }
-            if (input.name === 'confirm_email' && validateField(input) !== '') {
-              isValid = false;
-            }
+            // Skip optional fields, hidden honeypot, and removed confirm_email
+            if (input.name === 'message' || input.name === 'botcheck' || input.name === 'form_started' || input.name === 'confirm_email') return;
+            if (validateField(input) !== '') isValid = false;
           });
           submitBtn.disabled = !isValid;
           submitBtn.style.opacity = isValid ? '1' : '0.4';
@@ -3362,25 +1493,32 @@
         form.addEventListener('input', stamp);
 
         fields.forEach((input) => {
+          // Inject checkmark SVG into each visible field
+          const field = input.closest('.field');
+          if (field && !field.querySelector('.field-check') && input.type !== 'checkbox' && input.type !== 'hidden') {
+            field.insertAdjacentHTML('beforeend', checkSvg);
+          }
+
           input.addEventListener('blur', () => {
-            setError(input, validateField(input));
+            const msg = validateField(input);
+            setError(input, msg);
             checkFormValidity();
           });
           input.addEventListener('input', () => {
-            if (input.closest('.field').classList.contains('invalid')) {
-              setError(input, validateField(input));
-            }
-            // When email changes, re-validate the confirm email field
-            if (input.id.endsWith('-email') && !input.id.endsWith('-cemail')) {
-              const prefix = input.id.split('-')[0];
-              const confirmInput = document.getElementById(prefix + '-cemail');
-              if (confirmInput && confirmInput.closest('.field').classList.contains('invalid')) {
-                setError(confirmInput, validateField(confirmInput));
-              }
+            const msg = validateField(input);
+            // Always update state on input for immediate feedback
+            setError(input, input.closest('.field').classList.contains('invalid') ? msg : (msg ? '' : msg));
+            // Show valid state even if not previously invalid
+            if (!msg && input.value.trim()) {
+              input.closest('.field').classList.add('valid');
+              input.closest('.field').classList.remove('invalid');
             }
             checkFormValidity();
           });
-          input.addEventListener('change', checkFormValidity);
+          input.addEventListener('change', () => {
+            setError(input, validateField(input));
+            checkFormValidity();
+          });
         });
 
         form.addEventListener('submit', async (e) => {
@@ -3393,6 +1531,15 @@
           });
 
           if (firstInvalid) {
+            // Shake all invalid fields for premium feel
+            fields.forEach(input => {
+              const f = input.closest('.field');
+              if (f && f.classList.contains('invalid')) {
+                f.classList.remove('shake');
+                void f.offsetWidth; // trigger reflow to restart animation
+                f.classList.add('shake');
+              }
+            });
             firstInvalid.focus();
             return;
           }
@@ -3405,10 +1552,9 @@
           if (!startedAt || (Date.now() - startedAt) < minMs) {
             const box = form.querySelector('.form-success-msg');
             if (box) {
-              box.style.color = '#dc2626';
+              box.className = 'form-success-msg is-error';
               box.textContent = 'Please take a moment to review your details, then submit again.';
-              box.style.display = 'block';
-              setTimeout(() => { box.style.display = 'none'; }, 5000);
+              setTimeout(() => { box.className = 'form-success-msg'; }, 5000);
             }
             if (startedEl) startedEl.value = String(Date.now());
             return;
@@ -3421,12 +1567,11 @@
 
           // Submit to Web3Forms
           const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = 'Sending...';
+          submitBtn.classList.add('is-sending');
           submitBtn.disabled = true;
 
           const formData = new FormData(form);
-          formData.append('access_key', '0c7d24a9-a557-4b54-aca7-d1b5b7663d50');
+          formData.append('access_key', '2b5d7a13-3edc-4cee-b58d-923b40e272f2');
 
           // Identify which form sent this, and make the email replyable
           const source = form.id === 'modalForm' ? 'Consultation Request' : 'Contact Enquiry';
@@ -3463,12 +1608,10 @@
               form.reset();
               fields.forEach(input => {
                 const f = input.closest('.field');
-                if (f) f.classList.remove('invalid');
+                if (f) { f.classList.remove('invalid'); f.classList.remove('valid'); }
               });
 
-              // Fire the lead event, then hand off to a real URL so the
-              // conversion is measurable as a pageview rather than an
-              // in-page state change.
+              // Fire the lead event for analytics
               if (window.FT) {
                 window.FT.track('Lead', {
                   content_name: service,
@@ -3476,22 +1619,30 @@
                 }, ref);
               }
 
-              const q = new URLSearchParams({
-                ref: ref,
-                service: service,
-                form: form.id === 'modalForm' ? 'modal' : 'contact'
-              });
-              window.location.assign('thank-you.html?' + q.toString());
+              // Show inline success message instead of redirecting
+              const box = form.querySelector('.form-success-msg');
+              if (box) {
+                box.className = 'form-success-msg is-success';
+                box.textContent = 'Thank you, we\u2019ll get back to you shortly.';
+                setTimeout(() => { box.className = 'form-success-msg'; }, 8000);
+              }
+
+              // If this was the modal form, close the modal after user sees the message
+              if (form.id === 'modalForm') {
+                setTimeout(() => { if (window.closeModal) closeModal(); }, 3000);
+              }
+
               return;
             } else {
               showFailure(form, result.message || 'Something went wrong.');
             }
           } catch (error) {
-            showFailure(form, 'Network error.');
+            showFailure(form, 'Network error — please check your connection.');
           } finally {
             form.dataset.submitting = '0';
-            submitBtn.textContent = originalText;
+            submitBtn.classList.remove('is-sending');
             submitBtn.disabled = false;
+            checkFormValidity();
           }
         });
       };
@@ -3516,6 +1667,41 @@
       if (modal) {
         modal.addEventListener('click', function (e) {
           if (e.target === this) closeModal();
+        });
+      }
+
+      /* ---------- Reach-out modal (WhatsApp / Telegram) ---------- */
+      const reachModal = document.getElementById('reachModal');
+
+      window.openReach = function (e) {
+        if (e) e.preventDefault();
+        if (!reachModal) return;
+        reachModal.classList.add('open');
+        reachModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+      window.closeReach = function () {
+        if (!reachModal) return;
+        reachModal.classList.remove('open');
+        reachModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (reachModal) {
+        // click the backdrop to dismiss
+        reachModal.addEventListener('click', function (e) {
+          if (e.target === this) closeReach();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && reachModal.classList.contains('open')) closeReach();
+        });
+        // any [data-reach] link opens it; href="#contact" stays as the no-JS fallback
+        document.querySelectorAll('[data-reach]').forEach(function (el) {
+          el.addEventListener('click', openReach);
+        });
+        // picking a channel closes the dialog behind it
+        reachModal.querySelectorAll('.reach-option').forEach(function (el) {
+          el.addEventListener('click', function () { setTimeout(closeReach, 150); });
         });
       }
 

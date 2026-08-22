@@ -1,0 +1,21 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bot-body { fill: #3b82f6; }
+    .bot-face { fill: #fff; }
+  </style>
+  <g>
+    <g>
+      <circle class="bot-body" cx="50" cy="18" r="6" />
+      <rect class="bot-body" x="48" y="21" width="4" height="14" rx="2" />
+    </g>
+    <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
+    <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
+    <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
+    <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+    <g>
+      <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
+      <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
+    </g>
+    <path class="bot-body" d="M44 59q6 11 12 0Z" />
+  </g>
+</svg>

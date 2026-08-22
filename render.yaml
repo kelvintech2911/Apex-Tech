@@ -17,7 +17,7 @@ services:
     name: apex-tech
     runtime: static
     staticPublishPath: ./public
-    buildCommand: echo "static site - nothing to build"
+    buildCommand: python set-site-url.py $RENDER_EXTERNAL_URL
     pullRequestPreviewsEnabled: false
 
     headers:

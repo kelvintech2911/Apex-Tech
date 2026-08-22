@@ -19,9 +19,9 @@ Desktop.ini
 node_modules/
 package-lock.json
 
-# Misc
-New Text Document.txt
-
+# Generated Files
+public/sitemap.xml
+public/robots.txt
 # Python
 __pycache__/
 *.pyc
