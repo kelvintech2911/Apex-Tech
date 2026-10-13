@@ -908,22 +908,24 @@
             </div>
           </div>
 
-          <div class="field">
-            <label for="mf-email">Email Address</label>
-            <input type="email" id="mf-email" name="email" autocomplete="email" required />
-            <span class="field-error" data-for="mf-email"></span>
+          <div class="field-row">
+            <div class="field">
+              <label for="mf-email">Email Address</label>
+              <input type="email" id="mf-email" name="email" autocomplete="email" required />
+              <span class="field-error" data-for="mf-email"></span>
+            </div>
+            <div class="field">
+              <label for="mf-phone">Phone Number</label>
+              <input type="tel" id="mf-phone" name="phone" autocomplete="tel" required />
+              <span class="field-error" data-for="mf-phone"></span>
+            </div>
           </div>
 
           <div class="field">
-            <label for="mf-phone">Phone Number</label>
-            <input type="tel" id="mf-phone" name="phone" autocomplete="tel" required />
-            <span class="field-error" data-for="mf-phone"></span>
-          </div>
-
-          <div class="field">
-            <label for="mf-service">Service Required</label>
-            <div class="select-wrap">
-              <select id="mf-service" name="service" required>
+            <label for="mf-service-trigger">Service Required</label>
+            <div class="service-select" data-service-select>
+              <select class="service-select-native" id="mf-service" name="service" required tabindex="-1"
+                aria-hidden="true">
                 <option value="" selected disabled>Select a service…</option>
                 <option value="Mobile Phone Forensics">Mobile Phone Forensics</option>
                 <option value="Data Recovery">Data Recovery</option>
@@ -934,7 +936,22 @@
                 <option value="Device Access & Unlocking">Device Access &amp; Unlocking</option>
                 <option value="Other / More">Other / More</option>
               </select>
-              <span class="select-chev" aria-hidden="true" data-lucide="chevron-down"></span>
+              <button class="service-select-trigger" id="mf-service-trigger" type="button" aria-haspopup="listbox"
+                aria-expanded="false" aria-controls="mf-service-menu">
+                <span class="service-select-value">Select a service…</span>
+                <span class="select-chev" aria-hidden="true" data-lucide="chevron-down"></span>
+              </button>
+              <div class="service-select-menu" id="mf-service-menu" role="listbox" aria-label="Service Required"
+                hidden>
+                <button type="button" role="option" aria-selected="false" data-value="Mobile Phone Forensics">Mobile Phone Forensics</button>
+                <button type="button" role="option" aria-selected="false" data-value="Data Recovery">Data Recovery</button>
+                <button type="button" role="option" aria-selected="false" data-value="Digital Evidence Collection">Digital Evidence Collection</button>
+                <button type="button" role="option" aria-selected="false" data-value="Cyber Investigation">Cyber Investigation</button>
+                <button type="button" role="option" aria-selected="false" data-value="Email Investigation">Email Investigation</button>
+                <button type="button" role="option" aria-selected="false" data-value="Fraud Investigation">Fraud Investigation</button>
+                <button type="button" role="option" aria-selected="false" data-value="Device Access & Unlocking">Device Access &amp; Unlocking</button>
+                <button type="button" role="option" aria-selected="false" data-value="Other / More">Other / More</button>
+              </div>
             </div>
             <span class="field-error" data-for="mf-service"></span>
           </div>
@@ -946,8 +963,7 @@
             <span class="field-error" data-for="mf-message"></span>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block" disabled
-            style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">
+          <button type="submit" class="btn btn-primary btn-block" disabled>
             <span class="btn-label">Submit Request</span>
             <span class="btn-ico btn-ico-send" aria-hidden="true" data-lucide="send"></span>
             <span class="btn-spinner" aria-hidden="true" data-lucide="loader-circle"></span>
@@ -1207,7 +1223,7 @@
         if (!field) return;
         const err = field.querySelector('.field-error');
         // Inject checkmark if not present
-        if (!field.querySelector('.field-check')) {
+        if (!field.querySelector('.field-check') && input.tagName !== 'SELECT') {
           field.insertAdjacentHTML('beforeend', checkSvg);
         }
         field.classList.toggle('invalid', !!msg);
@@ -1291,7 +1307,7 @@
         fields.forEach((input) => {
           // Inject checkmark SVG into each visible field
           const field = input.closest('.field');
-          if (field && !field.querySelector('.field-check') && input.type !== 'checkbox' && input.type !== 'hidden') {
+          if (field && !field.querySelector('.field-check') && input.type !== 'checkbox' && input.type !== 'hidden' && input.tagName !== 'SELECT') {
             field.insertAdjacentHTML('beforeend', checkSvg);
           }
 
@@ -1336,7 +1352,8 @@
                 f.classList.add('shake');
               }
             });
-            firstInvalid.focus();
+            const customTrigger = firstInvalid.closest('.field')?.querySelector('.service-select-trigger');
+            (customTrigger || firstInvalid).focus();
             return;
           }
 
@@ -1443,6 +1460,81 @@
         });
       };
 
+      /* ---------- Accessible custom service selector ---------- */
+      const setupServiceSelect = (root) => {
+        const native = root.querySelector('.service-select-native');
+        const trigger = root.querySelector('.service-select-trigger');
+        const valueLabel = root.querySelector('.service-select-value');
+        const menu = root.querySelector('.service-select-menu');
+        const options = Array.from(menu.querySelectorAll('[role="option"]'));
+        if (!native || !trigger || !valueLabel || !menu) return;
+
+        const setOpen = (open) => {
+          root.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', String(open));
+          menu.hidden = !open;
+          if (open) {
+            const selected = options.find((option) => option.getAttribute('aria-selected') === 'true');
+            (selected || options[0]).focus();
+          }
+        };
+
+        const sync = () => {
+          const selected = native.options[native.selectedIndex];
+          const hasValue = Boolean(native.value);
+          valueLabel.textContent = hasValue && selected ? selected.textContent : 'Select a service…';
+          root.classList.toggle('has-value', hasValue);
+          options.forEach((option) => {
+            option.setAttribute('aria-selected', String(option.dataset.value === native.value));
+          });
+        };
+
+        trigger.addEventListener('click', () => setOpen(!root.classList.contains('open')));
+        trigger.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            event.preventDefault();
+            setOpen(true);
+          }
+        });
+
+        options.forEach((option) => {
+          option.addEventListener('click', () => {
+            native.value = option.dataset.value;
+            native.dispatchEvent(new Event('input', { bubbles: true }));
+            native.dispatchEvent(new Event('change', { bubbles: true }));
+            sync();
+            setOpen(false);
+            trigger.focus();
+          });
+          option.addEventListener('keydown', (event) => {
+            const index = options.indexOf(option);
+            let next = null;
+            if (event.key === 'ArrowDown') next = options[(index + 1) % options.length];
+            if (event.key === 'ArrowUp') next = options[(index - 1 + options.length) % options.length];
+            if (event.key === 'Home') next = options[0];
+            if (event.key === 'End') next = options[options.length - 1];
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              setOpen(false);
+              trigger.focus();
+              return;
+            }
+            if (next) {
+              event.preventDefault();
+              next.focus();
+            }
+          });
+        });
+
+        native.addEventListener('change', sync);
+        native.form?.addEventListener('reset', () => setTimeout(sync, 0));
+        document.addEventListener('click', (event) => {
+          if (!root.contains(event.target)) setOpen(false);
+        });
+        sync();
+      };
+
+      document.querySelectorAll('[data-service-select]').forEach(setupServiceSelect);
       setupForm('modalForm');
 
       /* ---------- Modal Logic ---------- */
