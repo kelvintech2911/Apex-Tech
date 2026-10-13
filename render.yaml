@@ -16,6 +16,8 @@ services:
   - type: web
     name: apex-tech
     runtime: static
+    # Keep the public Render hostname reachable even after a custom domain is added.
+    renderSubdomainPolicy: enabled
     staticPublishPath: ./public
     buildCommand: python set-site-url.py $RENDER_EXTERNAL_URL
     pullRequestPreviewsEnabled: false
@@ -43,7 +45,16 @@ services:
       # ft-tracking.js changes when the Pixel ID is added, so keep it short.
       - path: /ft-tracking.js
         name: Cache-Control
-        value: public, max-age=300, must-revalidate
+        value: public, max-age=3600, must-revalidate
+      - path: /styles.css
+        name: Cache-Control
+        value: public, max-age=3600, stale-while-revalidate=86400
+      - path: /favicon.svg
+        name: Cache-Control
+        value: public, max-age=604800
+      - path: /hero-forensics*
+        name: Cache-Control
+        value: public, max-age=604800, stale-while-revalidate=86400
       # The link-preview image is stable.
       - path: /og-image.jpg
         name: Cache-Control

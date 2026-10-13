@@ -7,13 +7,6 @@
   <title>Request Received — Apex Tech</title>
   <meta name="description" content="Your enquiry has been received. A Apex Tech investigator will be in touch shortly." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- SEO Tags -->
@@ -46,14 +39,14 @@
        ============================================================ -->
   <script>
     window.FT_CONFIG = {
-      metaPixelId: '905768905512055',        // TODO Apex Tech: add your own Meta Pixel ID
+      metaPixelId: '905768905512055', // Active Apex Tech Meta Pixel
       ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
       turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
       minFormSeconds: 3,      // submissions faster than this are treated as bots
       privacyUrl: 'privacy.html'
     };
   </script>
-  <script src="ft-tracking.js"></script>
+  <script src="ft-tracking.js" defer></script>
 </head>
 
 <body>
@@ -218,11 +211,18 @@
       // Routed through FT.track so it waits for consent and shares the
       // eventID with the Pixel fired on the form page (Meta de-duplicates).
       // Contact-link clicks are handled globally by ft-tracking.js.
-      if (window.FT) {
+      function trackLead() {
+        if (!window.FT) return;
         window.FT.track('Lead', {
           content_name: qs.get('service') || 'Not specified',
           content_category: qs.get('form') || 'website'
         }, ref || undefined);
+      }
+      // ft-tracking.js is deferred so it never blocks the first screen.
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', trackLead, { once: true });
+      } else {
+        trackLead();
       }
 
       document.querySelectorAll('.year').forEach(function (el) {
@@ -230,5 +230,21 @@
       });
     })();
   </script>
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.onLoad = function () {
+      Tawk_API.showWidget();
+    };
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6acce06cc519d834c73a0d31/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 </body>
 </html>

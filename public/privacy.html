@@ -8,14 +8,7 @@
   <meta name="description"
     content="Privacy Policy for Apex Tech Digital Investigation & Mobile Forensics. Learn how we collect, use, and protect your personal information." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261013-legal" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- SEO Tags -->
   <meta name="keywords" content="privacy policy, digital investigation privacy, mobile forensics privacy, Apex Tech privacy">
@@ -52,17 +45,17 @@
        ============================================================ -->
   <script>
     window.FT_CONFIG = {
-      metaPixelId: '905768905512055',        // TODO Apex Tech: add your own Meta Pixel ID
+      metaPixelId: '905768905512055', // Active Apex Tech Meta Pixel
       ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
       turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
       minFormSeconds: 3,      // submissions faster than this are treated as bots
       privacyUrl: 'privacy.html'
     };
   </script>
-  <script src="ft-tracking.js"></script>
+  <script src="ft-tracking.js" defer></script>
 </head>
 
-<body>
+<body class="legal-page">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -95,7 +88,6 @@
         <a href="index.html#services">Services</a>
         <a href="index.html#about">About</a>
         <a href="index.html#faq">FAQ</a>
-        <a href="index.html#contact">Contact</a>
       </nav>
       <a href="index.html" class="back-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -107,8 +99,9 @@
     </div>
   </header>
 
+  <main id="main" tabindex="-1">
   <!-- Hero -->
-  <section class="policy-hero" id="main" tabindex="-1">
+  <section class="policy-hero">
     <div class="container">
       <h1>Privacy Policy</h1>
       <p>How we collect, use, and protect your personal information.</p>
@@ -117,15 +110,32 @@
   </section>
 
   <!-- Content -->
-  <article class="policy-content">
+  <div class="container policy-shell">
+    <aside class="policy-toc" aria-label="Privacy policy contents">
+      <p class="policy-toc-title">On this page</p>
+      <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#information">Information we collect</a>
+        <a href="#use">How we use information</a>
+        <a href="#security">Data protection</a>
+        <a href="#sharing">Sharing and disclosure</a>
+        <a href="#retention">Data retention</a>
+        <a href="#rights">Your rights</a>
+        <a href="#cookies">Cookies and tracking</a>
+        <a href="#changes">Policy changes</a>
+        <a href="#privacy-contact">Contact us</a>
+      </nav>
+    </aside>
 
-    <h2>1. Introduction</h2>
+    <article class="policy-content">
+
+    <h2 id="introduction">1. Introduction</h2>
     <p>Apex Tech ("we", "our", or "us") is committed to protecting the privacy and confidentiality of all individuals
       who interact with our services. This Privacy Policy explains how we collect, use, store, and safeguard your
       personal information when you visit our website, use our services, or communicate with us.</p>
     <p>By using our website or engaging our services, you acknowledge that you have read and understood this policy.</p>
 
-    <h2>2. Information We Collect</h2>
+    <h2 id="information">2. Information We Collect</h2>
     <p>We may collect the following types of information:</p>
     <ul>
       <li><strong>Contact Information:</strong> Name, email address, phone number, and any details you provide through
@@ -141,7 +151,7 @@
         WhatsApp, or Telegram.</li>
     </ul>
 
-    <h2>3. How We Use Your Information</h2>
+    <h2 id="use">3. How We Use Your Information</h2>
     <p>We use the information we collect to:</p>
     <ul>
       <li>Respond to your inquiries and consultation requests.</li>
@@ -151,7 +161,7 @@
       <li>Comply with legal and regulatory obligations.</li>
     </ul>
 
-    <h2>4. Data Protection & Security</h2>
+    <h2 id="security">4. Data Protection &amp; Security</h2>
     <p>We take the security of your data seriously. All personal and case-related information is handled with strict
       confidentiality. Our security measures include:</p>
     <ul>
@@ -161,7 +171,7 @@
       <li>Regular review and updating of our security practices.</li>
     </ul>
 
-    <h2>5. Data Sharing & Disclosure</h2>
+    <h2 id="sharing">5. Data Sharing &amp; Disclosure</h2>
     <p>We do not sell, trade, or rent your personal information to third parties. We may share information only in the
       following circumstances:</p>
     <ul>
@@ -175,12 +185,12 @@
         only to provide their service to us.</li>
     </ul>
 
-    <h2>6. Data Retention</h2>
+    <h2 id="retention">6. Data Retention</h2>
     <p>We retain your personal information only for as long as necessary to fulfil the purposes for which it was
       collected, including meeting legal, accounting, or reporting requirements. Case-related data is retained in
       accordance with applicable professional and legal standards.</p>
 
-    <h2>7. Your Rights</h2>
+    <h2 id="rights">7. Your Rights</h2>
     <p>You have the right to:</p>
     <ul>
       <li>Request access to the personal information we hold about you.</li>
@@ -192,7 +202,7 @@
       <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>.
     </p>
 
-    <h2>8. Cookies &amp; Tracking</h2>
+    <h2 id="cookies">8. Cookies &amp; Tracking</h2>
     <p>Our website uses cookies and similar technologies for the following purposes:</p>
     <ul>
       <li><strong>Essential:</strong> Cookies and browser storage required for the site to function, including
@@ -215,11 +225,11 @@
     <p>We do not sell your personal information, and we do not use these technologies to access anything on your device
       beyond the standard information your browser provides.</p>
 
-    <h2>9. Changes to This Policy</h2>
+    <h2 id="changes">9. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated
       revision date. We encourage you to review this policy periodically.</p>
 
-    <h2>10. Contact Us</h2>
+    <h2 id="privacy-contact">10. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
     <ul>
       <li><strong>Email:</strong> <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>
@@ -230,7 +240,9 @@
           rel="noopener noreferrer">@Apextechforensics</a></li>
     </ul>
 
-  </article>
+    </article>
+  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="page-footer">
@@ -248,6 +260,22 @@
       el.textContent = new Date().getFullYear();
     });
   </script>
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.onLoad = function () {
+      Tawk_API.showWidget();
+    };
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6acce06cc519d834c73a0d31/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 </body>
 
 </html>

@@ -8,19 +8,11 @@
   <meta name="description"
     content="Confidential digital investigation, mobile forensic analysis, data recovery, and evidence services delivered with precision, discretion, and professionalism." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
-  <link rel="stylesheet" media="print" onload="this.media='all'"
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
-  </noscript>
-
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="hero-forensics-1024.webp" type="image/webp"
+    imagesrcset="hero-forensics-640.webp 640w, hero-forensics-1024.webp 1024w"
+    imagesizes="(max-width: 860px) calc(100vw - 36px), (max-width: 1200px) 42vw, 500px"
+    fetchpriority="high">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- SEO Tags -->
   <meta name="keywords"
@@ -139,14 +131,14 @@
        ============================================================ -->
   <script>
     window.FT_CONFIG = {
-      metaPixelId: '905768905512055',        // TODO Apex Tech: add your own Meta Pixel ID
+      metaPixelId: '905768905512055', // Active Apex Tech Meta Pixel
       ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
       turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
       minFormSeconds: 3       // submissions faster than this are treated as bots
     };
   </script>
 
-  <script src="ft-tracking.js"></script>
+  <script src="ft-tracking.js" defer></script>
 </head>
 
 <body>
@@ -167,7 +159,8 @@
               <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
               <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
               <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-              <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+              <path class="bot-face"
+                d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
               <g class="bot-eyes">
                 <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
                 <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -185,7 +178,6 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#awareness" class="nav-link">Awareness</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
@@ -212,7 +204,8 @@
                 <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
                 <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
                 <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-                <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+                <path class="bot-face"
+                  d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
                 <g class="bot-eyes">
                   <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
                   <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -224,9 +217,7 @@
           <span>Apex <span class="brand-accent">Tech</span></span>
         </a>
         <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 6 6 18" /><path d="m6 6 12 12" />
-          </svg>
+          <span class="ui-icon" aria-hidden="true" data-lucide="x"></span>
         </button>
       </div>
       <div class="mobile-nav-body">
@@ -235,7 +226,6 @@
         <a href="#about" class="mobile-link">About</a>
         <a href="#awareness" class="mobile-link">Awareness</a>
         <a href="#faq" class="mobile-link">FAQ</a>
-        <a href="#contact" class="mobile-link">Contact</a>
       </div>
       <div class="mobile-nav-footer">
         <a href="javascript:void(0)" onclick="openModal(event)" class="mobile-cta">Request a Consultation</a>
@@ -260,7 +250,8 @@
           <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <path class="bot-face"
+            d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
           <g class="bot-eyes">
             <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
             <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -278,7 +269,8 @@
           <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <path class="bot-face"
+            d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
           <g class="bot-eyes">
             <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
             <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -288,46 +280,52 @@
       </svg>
 
       <div class="container hero-inner">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <h1 class="hero-title">Professional Digital<br>Investigation &amp; <span class="text-glow">Mobile
               Forensics</span></h1>
           <p class="hero-sub">Confidential digital investigation, mobile forensic analysis, data recovery, and evidence
             services delivered with precision, discretion, and professionalism.</p>
-          <div class="hero-actions">
-            <a href="javascript:void(0)" onclick="openModal(event)" class="btn btn-primary">Request a Consultation
-              <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
-            <div class="dropdown">
-              <button class="btn btn-ghost-light dropdown-trigger" id="contactInvestigatorBtn" aria-haspopup="true"
-                aria-expanded="false">
-                Contact an Investigator
-                <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;">
-                  <polyline points="6 9 12 15 18 9"></polyline>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-glow" aria-hidden="true"></div>
+          <picture class="hero-picture">
+            <source type="image/webp"
+              srcset="hero-forensics-640.webp 640w, hero-forensics-1024.webp 1024w"
+              sizes="(max-width: 860px) calc(100vw - 36px), (max-width: 1200px) 42vw, 500px">
+            <img class="hero-image" src="hero-forensics.jpg"
+              alt="Digital forensic investigator analysing evidence across secure computer systems"
+              width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+
+        <div class="hero-actions">
+          <a href="javascript:void(0)" onclick="openModal(event)" class="btn btn-primary">Request a Consultation
+            <span class="btn-ico" aria-hidden="true" data-lucide="calendar-check"></span>
+          </a>
+          <div class="dropdown">
+            <button class="btn btn-ghost-light dropdown-trigger" id="contactInvestigatorBtn" aria-haspopup="true"
+              aria-expanded="false">
+              Contact an Investigator
+              <span class="btn-ico" aria-hidden="true" data-lucide="chevron-down"></span>
+            </button>
+            <div class="dropdown-menu" id="investigatorMenu">
+              <a href="https://wa.me/13436350317" target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                data-contact="whatsapp">
+                <svg viewBox="0 0 24 24" fill="#25D366" class="contact-ico">
+                  <path
+                    d="M11.42 0H11.4C5.1 0 0 5.1 0 11.4c0 2.01.52 3.93 1.51 5.64L.07 22.84l5.95-1.56c1.66.95 3.52 1.45 5.4 1.45 6.3 0 11.4-5.1 11.4-11.4S17.7 0 11.4 0zm0 20.84c-1.77 0-3.5-.47-5.01-1.37l-.36-.21-3.72.98.99-3.63-.23-.37a9.38 9.38 0 0 1-1.46-5.14c0-5.26 4.28-9.54 9.54-9.54 2.55 0 4.95 1 6.74 2.8 1.8 1.8 2.79 4.19 2.79 6.74 0 5.25-4.28 9.53-9.54 9.53zm5.22-7.14c-.29-.15-1.71-.84-1.98-.94-.26-.09-.45-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.2-.29.29-.49.09-.2.05-.37-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.26.29-1 .98-1 2.39s1.02 2.77 1.17 2.97c.14.2 2.03 3.1 4.91 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.09 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.07-.12-.27-.19-.56-.34z" />
                 </svg>
-              </button>
-              <div class="dropdown-menu" id="investigatorMenu">
-                <a href="https://wa.me/13436350317" target="_blank" rel="noopener noreferrer" class="dropdown-item"
-                  data-contact="whatsapp">
-                  <svg viewBox="0 0 24 24" fill="#25D366" class="contact-ico">
-                    <path
-                      d="M11.42 0H11.4C5.1 0 0 5.1 0 11.4c0 2.01.52 3.93 1.51 5.64L.07 22.84l5.95-1.56c1.66.95 3.52 1.45 5.4 1.45 6.3 0 11.4-5.1 11.4-11.4S17.7 0 11.4 0zm0 20.84c-1.77 0-3.5-.47-5.01-1.37l-.36-.21-3.72.98.99-3.63-.23-.37a9.38 9.38 0 0 1-1.46-5.14c0-5.26 4.28-9.54 9.54-9.54 2.55 0 4.95 1 6.74 2.8 1.8 1.8 2.79 4.19 2.79 6.74 0 5.25-4.28 9.53-9.54 9.53zm5.22-7.14c-.29-.15-1.71-.84-1.98-.94-.26-.09-.45-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.2-.29.29-.49.09-.2.05-.37-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.26.29-1 .98-1 2.39s1.02 2.77 1.17 2.97c.14.2 2.03 3.1 4.91 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.09 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.07-.12-.27-.19-.56-.34z" />
-                  </svg>
-                  WhatsApp
-                </a>
-                <a href="https://t.me/Apextechforensics" target="_blank" rel="noopener noreferrer" class="dropdown-item"
-                  data-contact="telegram">
-                  <svg viewBox="0 0 24 24" fill="#2AABEE" class="contact-ico">
-                    <path
-                      d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-                  </svg>
-                  Telegram
-                </a>
-              </div>
+                WhatsApp
+              </a>
+              <a href="https://t.me/Apextechforensics" target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                data-contact="telegram">
+                <svg viewBox="0 0 24 24" fill="#2AABEE" class="contact-ico">
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                </svg>
+                Telegram
+              </a>
             </div>
           </div>
         </div>
@@ -376,7 +374,8 @@
                 <span class="card-ico" aria-hidden="true" data-lucide="smartphone"></span>
                 <div>
                   <h3 class="card-title">Mobile Phone Forensics</h3>
-                  <p class="card-text">Recover and analyze evidence from mobile devices, including messages, Social Apps, and location history.</p>
+                  <p class="card-text">Recover and analyze evidence from mobile devices, including messages, Social
+                    Apps, and location history.</p>
                 </div>
               </div>
             </article>
@@ -397,7 +396,8 @@
                 <span class="card-ico" aria-hidden="true" data-lucide="scan-search"></span>
                 <div>
                   <h3 class="card-title">Fraud Investigation</h3>
-                  <p class="card-text">It can involve tracing digital evidence connected to fraudulent transactions, communications, accounts, and financial activity.</p>
+                  <p class="card-text">It can involve tracing digital evidence connected to fraudulent transactions,
+                    communications, accounts, and financial activity.</p>
                 </div>
               </div>
             </article>
@@ -448,11 +448,7 @@
 
             <a href="#contact" class="chat-cta reveal" style="transition-delay: 0.8s;">
               Not sure which service fits? Speak to an investigator
-              <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <span class="btn-ico" aria-hidden="true" data-lucide="message-circle"></span>
             </a>
 
           </div>
@@ -523,7 +519,8 @@
               <strong>to provoke a response, any response.</strong> It solidifies, in their minds, their power
               over you, that they are calling the shots, that you are weak, or gullible, or easily manipulated, or
               vulnerable, or whatever they have labeled you in their mind that means you are &ldquo;less&rdquo;, less
-              than them.</p>
+              than them.
+            </p>
             <p class="narc-cite">Kellen Vonhouser</p>
           </article>
 
@@ -585,7 +582,8 @@
         </div>
 
         <p class="narc-foot reveal">Recognise any of this? A clear, documented record changes the conversation.
-          <a href="#contact" data-reach>Speak to an investigator</a>.</p>
+          <a href="#contact" data-reach>Speak to an investigator</a>.
+        </p>
       </div>
     </section>
 
@@ -717,7 +715,8 @@
           <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <path class="bot-face"
+            d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
           <g class="bot-eyes">
             <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
             <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -735,7 +734,8 @@
           <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
           <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-          <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+          <path class="bot-face"
+            d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
           <g class="bot-eyes">
             <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
             <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -748,95 +748,6 @@
         <h2 class="final-cta-title">Need Professional Digital<br>Investigation Support?</h2>
         <p class="final-cta-sub">Speak with the Apex Tech team about your investigation requirements.</p>
 
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span>Contact</span>
-          <h2 class="section-title">Get in Touch</h2>
-          <p class="section-lead">Tell us about your situation. We&rsquo;ll respond and arrange a confidential
-            consultation.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-form-wrap reveal">
-            <form class="contact-form" id="contactForm" novalidate>
-              <input type="checkbox" name="botcheck" class="hidden">
-              <input type="hidden" name="form_started" value="" class="ft-started">
-              <input type="hidden" name="autoresponse" value="Thank you for contacting Apex Tech. We have received your inquiry and will be in touch within 24 hours. — The Apex Tech Team">
-              <div class="ft-turnstile"></div>
-              <div class="field-row">
-                <div class="field">
-                  <label for="cf-fname">First Name</label>
-                  <input type="text" id="cf-fname" name="first_name" autocomplete="given-name" required />
-                  <span class="field-error" data-for="cf-fname"></span>
-                </div>
-                <div class="field">
-                  <label for="cf-lname">Last Name</label>
-                  <input type="text" id="cf-lname" name="last_name" autocomplete="family-name" required />
-                  <span class="field-error" data-for="cf-lname"></span>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="cf-email">Email Address</label>
-                <input type="email" id="cf-email" name="email" autocomplete="email" required />
-                <span class="field-error" data-for="cf-email"></span>
-              </div>
-
-              <div class="field">
-                <label for="cf-phone">Phone Number</label>
-                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required />
-                <span class="field-error" data-for="cf-phone"></span>
-              </div>
-
-              <div class="field">
-                <label for="cf-service">Service Required</label>
-                <div class="select-wrap">
-                  <select id="cf-service" name="service" required>
-                    <option value="" selected disabled>Select a service…</option>
-                    <option value="mobile-forensics">Mobile Phone Forensics</option>
-                    <option value="data-recovery">Data Recovery</option>
-                    <option value="evidence-collection">Digital Evidence Collection</option>
-                    <option value="cyber-investigation">Cyber Investigation</option>
-                    <option value="email-investigation">Email Investigation</option>
-                    <option value="fraud-investigation">Fraud Investigation</option>
-                    <option value="device-access">Device Access &amp; Unlocking</option>
-                    <option value="other">Other / Not sure</option>
-                  </select>
-                  <span class="select-chev" aria-hidden="true" data-lucide="chevron-down"></span>
-                </div>
-                <span class="field-error" data-for="cf-service"></span>
-              </div>
-
-              <div class="field">
-                <label for="cf-message">Message (Optional)</label>
-                <textarea id="cf-message" name="message" rows="4"
-                  placeholder="Briefly describe your situation (don&rsquo;t include sensitive data yet)."></textarea>
-                <span class="field-error" data-for="cf-message"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" disabled
-                style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">
-                <span class="btn-label">Submit Inquiry</span>
-                <svg class="btn-ico btn-ico-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m22 2-7 20-4-9-9-4Z" />
-                  <path d="M22 2 11 13" />
-                </svg>
-                <svg class="btn-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                  <path d="M12 2a10 10 0 0 1 10 10" />
-                </svg>
-              </button>
-              <div class="form-success-msg" aria-live="polite"></div>
-              <p class="form-note"><span aria-hidden="true" data-lucide="lock"></span> Your information will be treated with
-                confidentiality.
-              </p>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -857,7 +768,8 @@
                 <rect class="bot-body" x="10" y="51" width="17" height="24" rx="12" />
                 <rect class="bot-body" x="73" y="51" width="17" height="24" rx="12" />
                 <rect class="bot-body" x="19" y="33" width="62" height="56" rx="24" />
-                <path class="bot-face" d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
+                <path class="bot-face"
+                  d="M27 51C27 44 32 39 39 39H61C68 39 73 44 73 51V72C73 74 71.5 76 69 76C60 65 40 65 31 76C28.5 76 27 74 27 72Z" />
                 <g class="bot-eyes">
                   <ellipse class="bot-body" cx="39.5" cy="50" rx="5.2" ry="6.8" />
                   <ellipse class="bot-body" cx="60.5" cy="50" rx="5.2" ry="6.8" />
@@ -886,10 +798,7 @@
             </svg>
           </a>
           <a href="mailto:apextechforensics@gmail.com" aria-label="Email" class="social" data-contact="email">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px;">
-              <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-            </svg>
+            <span class="social-icon" aria-hidden="true" data-lucide="mail"></span>
           </a>
         </div>
       </div>
@@ -900,7 +809,6 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
       </nav>
 
       <nav class="footer-col" aria-label="Services">
@@ -918,26 +826,6 @@
         <a href="terms.html">Terms of Service</a>
       </nav>
 
-      <div class="footer-col footer-visit">
-        <h4>Contact Us</h4>
-        <address class="footer-address">
-          <div class="footer-item">
-            <span class="footer-ico" data-lucide="map-pin" aria-hidden="true"></span>
-            <div class="footer-item-body">
-              <span class="footer-label">Location</span>
-              <span class="footer-value">46 Willow Creek Avenue, Charlotte, North Carolina</span>
-            </div>
-          </div>
-
-          <div class="footer-item">
-            <span class="footer-ico" data-lucide="phone" aria-hidden="true"></span>
-            <div class="footer-item-body">
-              <span class="footer-label">Phone</span>
-              <a class="footer-value" href="tel:+13436350317" data-contact="phone">+1 (343) 635-0317</a>
-            </div>
-          </div>
-        </address>
-      </div>
     </div>
 
     <div class="container footer-bottom">
@@ -946,44 +834,13 @@
     </div>
   </footer>
 
-  <!-- ============ CONSULTATION MODAL ============ -->
-  <!-- ============ MOBILE ACTION BAR ============ -->
-  <div class="action-bar" id="actionBar">
-    <a class="action-btn is-wa" href="https://wa.me/13436350317" target="_blank" rel="noopener noreferrer"
-      data-contact="whatsapp">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-      </svg>
-      WhatsApp
-    </a>
-    <a class="action-btn" href="tel:+13436350317" data-contact="phone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" aria-hidden="true">
-        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
-      </svg>
-      Call
-    </a>
-    <button class="action-btn is-primary" type="button" onclick="openModal(event)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" aria-hidden="true">
-        <path d="M5 12h14" />
-        <path d="m12 5 7 7-7 7" />
-      </svg>
-      Consultation
-    </button>
-  </div>
-
   <!-- ============ REACH-OUT MODAL (WhatsApp / Telegram) ============ -->
   <div id="reachModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reachModalTitle"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <button class="modal-close" aria-label="Close" onclick="closeReach()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <span class="ui-icon" aria-hidden="true" data-lucide="x"></span>
         </button>
         <h3 class="modal-title" id="reachModalTitle">Speak to an investigator</h3>
         <p class="modal-lead">Message us directly. Every conversation is confidential.</p>
@@ -993,36 +850,30 @@
             data-contact="whatsapp">
             <span class="reach-ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="#25D366">
-                <path d="M11.42 0H11.4C5.1 0 0 5.1 0 11.4c0 2.01.52 3.93 1.51 5.64L.07 22.84l5.95-1.56c1.66.95 3.52 1.45 5.4 1.45 6.3 0 11.4-5.1 11.4-11.4S17.7 0 11.4 0zm0 20.84c-1.77 0-3.5-.47-5.01-1.37l-.36-.21-3.72.98.99-3.63-.23-.37a9.38 9.38 0 0 1-1.46-5.14c0-5.26 4.28-9.54 9.54-9.54 2.55 0 4.95 1 6.74 2.8 1.8 1.8 2.79 4.19 2.79 6.74 0 5.25-4.28 9.53-9.54 9.53zm5.22-7.14c-.29-.15-1.71-.84-1.98-.94-.26-.09-.45-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.2-.29.29-.49.09-.2.05-.37-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.26.29-1 .98-1 2.39s1.02 2.77 1.17 2.97c.14.2 2.03 3.1 4.91 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.09 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.07-.12-.27-.19-.56-.34z" />
+                <path
+                  d="M11.42 0H11.4C5.1 0 0 5.1 0 11.4c0 2.01.52 3.93 1.51 5.64L.07 22.84l5.95-1.56c1.66.95 3.52 1.45 5.4 1.45 6.3 0 11.4-5.1 11.4-11.4S17.7 0 11.4 0zm0 20.84c-1.77 0-3.5-.47-5.01-1.37l-.36-.21-3.72.98.99-3.63-.23-.37a9.38 9.38 0 0 1-1.46-5.14c0-5.26 4.28-9.54 9.54-9.54 2.55 0 4.95 1 6.74 2.8 1.8 1.8 2.79 4.19 2.79 6.74 0 5.25-4.28 9.53-9.54 9.53zm5.22-7.14c-.29-.15-1.71-.84-1.98-.94-.26-.09-.45-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.2-.29.29-.49.09-.2.05-.37-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.26.29-1 .98-1 2.39s1.02 2.77 1.17 2.97c.14.2 2.03 3.1 4.91 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.09 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.38-.07-.12-.27-.19-.56-.34z" />
               </svg>
             </span>
             <span class="reach-body">
               <span class="reach-name">WhatsApp</span>
               <span class="reach-meta">+1 (343) 635-0317</span>
             </span>
-            <svg class="reach-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <span class="reach-arrow" aria-hidden="true" data-lucide="arrow-up-right"></span>
           </a>
 
           <a class="reach-option" href="https://t.me/Apextechforensics" target="_blank" rel="noopener noreferrer"
             data-contact="telegram">
             <span class="reach-ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="#2AABEE">
-                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                <path
+                  d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
               </svg>
             </span>
             <span class="reach-body">
               <span class="reach-name">Telegram</span>
               <span class="reach-meta">@Apextechforensics</span>
             </span>
-            <svg class="reach-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <span class="reach-arrow" aria-hidden="true" data-lucide="arrow-up-right"></span>
           </a>
         </div>
       </div>
@@ -1034,20 +885,17 @@
     <div class="modal-dialog">
       <div class="modal-content contact-form-wrap">
         <button class="modal-close" aria-label="Close" onclick="closeModal()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <span class="ui-icon" aria-hidden="true" data-lucide="x"></span>
         </button>
         <h3 class="modal-title" id="consultationModalTitle">Request a Consultation</h3>
         <p class="modal-lead">Provide your details and we'll arrange a confidential consultation.</p>
 
         <form class="contact-form" id="modalForm" novalidate>
           <input type="checkbox" name="botcheck" class="hidden">
-              <input type="hidden" name="form_started" value="" class="ft-started">
-              <input type="hidden" name="autoresponse" value="Thank you for contacting Apex Tech. We have received your consultation request and will be in touch within 24 hours. — The Apex Tech Team">
-              <div class="ft-turnstile"></div>
+          <input type="hidden" name="form_started" value="" class="ft-started">
+          <input type="hidden" name="autoresponse"
+            value="Thank you for contacting Apex Tech. We have received your consultation request and will be in touch within 24 hours. — The Apex Tech Team">
+          <div class="ft-turnstile"></div>
           <div class="field-row">
             <div class="field">
               <label for="mf-fname">First Name</label>
@@ -1102,14 +950,8 @@
           <button type="submit" class="btn btn-primary btn-block" disabled
             style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease;">
             <span class="btn-label">Submit Request</span>
-            <svg class="btn-ico btn-ico-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="m22 2-7 20-4-9-9-4Z" />
-              <path d="M22 2 11 13" />
-            </svg>
-            <svg class="btn-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-              <path d="M12 2a10 10 0 0 1 10 10" />
-            </svg>
+            <span class="btn-ico btn-ico-send" aria-hidden="true" data-lucide="send"></span>
+            <span class="btn-spinner" aria-hidden="true" data-lucide="loader-circle"></span>
           </button>
           <div class="form-success-msg" aria-live="polite"></div>
         </form>
@@ -1127,8 +969,10 @@
     (function () {
       'use strict';
       var ICONS = {
+        "arrow-up-right": "<path d=\"M7 7h10v10\" /> <path d=\"M7 17 17 7\" />",
         "badge-check": "<path d=\"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z\" /> <path d=\"m9 12 2 2 4-4\" />",
         "building-2": "<path d=\"M10 12h4\" /> <path d=\"M10 8h4\" /> <path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" /> <path d=\"M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2\" /> <path d=\"M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16\" />",
+        "calendar-check": "<path d=\"M8 2v4\" /> <path d=\"M16 2v4\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" /> <path d=\"M3 10h18\" /> <path d=\"m9 16 2 2 4-4\" />",
         "check-check": "<path d=\"M18 6 7 17l-5-5\" /> <path d=\"m22 10-7.5 7.5L13 16\" />",
         "chevron-down": "<path d=\"m6 9 6 6 6-6\" />",
         "clipboard-list": "<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\" /> <path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" /> <path d=\"M12 11h4\" /> <path d=\"M12 16h4\" /> <path d=\"M8 11h.01\" /> <path d=\"M8 16h.01\" />",
@@ -1141,6 +985,7 @@
         "headphones": "<path d=\"M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3\" />",
         "key-round": "<path d=\"M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z\" /> <circle cx=\"16.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />",
         "linkedin": "<path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"/><rect width=\"4\" height=\"12\" x=\"2\" y=\"9\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/>",
+        "loader-circle": "<path d=\"M21 12a9 9 0 1 1-6.219-8.56\" />",
         "lock": "<rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\" /> <path d=\"M7 11V7a5 5 0 0 1 10 0v4\" />",
         "lock-keyhole": "<circle cx=\"12\" cy=\"16\" r=\"1\" /> <rect x=\"3\" y=\"10\" width=\"18\" height=\"12\" rx=\"2\" /> <path d=\"M7 10V7a5 5 0 0 1 10 0v3\" />",
         "mail": "<path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\" /> <rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\" />",
@@ -1153,6 +998,7 @@
         "radar": "<path d=\"M19.07 4.93A10 10 0 0 0 6.99 3.34\" /> <path d=\"M4 6h.01\" /> <path d=\"M2.29 9.62A10 10 0 1 0 21.31 8.35\" /> <path d=\"M16.24 7.76A6 6 0 1 0 8.23 16.67\" /> <path d=\"M12 18h.01\" /> <path d=\"M17.99 11.66A6 6 0 0 1 15.77 16.67\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> <path d=\"m13.41 10.59 5.66-5.66\" />",
         "scale": "<path d=\"M12 3v18\" /> <path d=\"m19 8 3 8a5 5 0 0 1-6 0zV7\" /> <path d=\"M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1\" /> <path d=\"m5 8 3 8a5 5 0 0 1-6 0zV7\" /> <path d=\"M7 21h10\" />",
         "scan-search": "<path d=\"M3 7V5a2 2 0 0 1 2-2h2\" /> <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" /> <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" /> <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" /> <circle cx=\"12\" cy=\"12\" r=\"3\" /> <path d=\"m16 16-1.9-1.9\" />",
+        "send": "<path d=\"m22 2-7 20-4-9-9-4Z\" /> <path d=\"M22 2 11 13\" />",
         "shield": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />",
         "shield-check": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" /> <path d=\"m9 12 2 2 4-4\" />",
         "smartphone": "<rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\" /> <path d=\"M12 18h.01\" />",
@@ -1236,55 +1082,6 @@
         }, { passive: true });
         window.addEventListener('resize', drawProgress, { passive: true });
       }
-
-      /* ---------- Mobile action bar ---------- */
-      (function () {
-        const bar = document.getElementById('actionBar');
-        if (!bar) return;
-
-        const hero = document.querySelector('.hero');
-        const contact = document.getElementById('contact');
-        const footer = document.querySelector('.site-footer, .page-footer, footer');
-
-        let pastHero = false;
-        let overContact = false;
-        const sync = () => bar.classList.toggle('show', pastHero && !overContact);
-
-        if ('IntersectionObserver' in window && hero) {
-          new IntersectionObserver(([en]) => {
-            pastHero = !en.isIntersecting;
-            sync();
-          }, { threshold: 0 }).observe(hero);
-
-          // hide over the real form and the footer so it never covers them
-          const zones = [contact, footer].filter(Boolean);
-          if (zones.length) {
-            const seen = new Set();
-            const zoneObs = new IntersectionObserver((entries) => {
-              entries.forEach((en) => {
-                if (en.isIntersecting) seen.add(en.target);
-                else seen.delete(en.target);
-              });
-              overContact = seen.size > 0;
-              sync();
-            }, { threshold: 0 });
-            zones.forEach((z) => zoneObs.observe(z));
-          }
-        } else {
-          bar.classList.add('show');
-        }
-
-        // never let the bar sit on top of an open dialog
-        const dialogs = ['consultationModal', 'reachModal']
-          .map((id) => document.getElementById(id)).filter(Boolean);
-        if (dialogs.length && 'MutationObserver' in window) {
-          const mo = new MutationObserver(() => {
-            const anyOpen = dialogs.some((d) => d.classList.contains('open'));
-            bar.style.visibility = anyOpen ? 'hidden' : '';
-          });
-          dialogs.forEach((d) => mo.observe(d, { attributes: true, attributeFilter: ['class'] }));
-        }
-      })();
 
       /* ---------- Scroll-spy: highlight the section you are reading ---------- */
       (function () {
@@ -1647,7 +1444,6 @@
         });
       };
 
-      setupForm('contactForm');
       setupForm('modalForm');
 
       /* ---------- Modal Logic ---------- */
@@ -1732,18 +1528,22 @@
         let width, height;
         let particles = [];
         let rafId = null;
+        let lastFrame = 0;
         let onScreen = true;
 
         function initCanvas() {
           width = canvas.parentElement.offsetWidth;
           height = canvas.parentElement.offsetHeight;
-          canvas.width = width * window.devicePixelRatio;
-          canvas.height = height * window.devicePixelRatio;
-          ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+          // Cap pixel density so high-DPI phones do not render millions of
+          // unnecessary canvas pixels on every frame.
+          const dpr = Math.min(window.devicePixelRatio || 1, width < 768 ? 1.5 : 2);
+          canvas.width = Math.round(width * dpr);
+          canvas.height = Math.round(height * dpr);
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
           particles = [];
           // Tight density tuning: fewer but closer particles on mobile
-          const numParticles = width < 768 ? 40 : 85;
+          const numParticles = width < 768 ? 24 : 60;
           for (let i = 0; i < numParticles; i++) {
             particles.push({
               x: Math.random() * width,
@@ -1784,7 +1584,7 @@
               if (distSq < maxDistSq) {
                 let dist = Math.sqrt(distSq);
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(59, 130, 246, ${ 0.18 - (dist / maxDist) * 0.18 })`;
+                ctx.strokeStyle = `rgba(59, 130, 246, ${0.18 - (dist / maxDist) * 0.18})`;
                 ctx.lineWidth = 1;
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(p2.x, p2.y);
@@ -1794,8 +1594,14 @@
           }
         }
 
-        function frame() {
-          draw(true);
+        function frame(now) {
+          // Mobile devices render this decorative effect at 30fps. Text,
+          // scrolling, and taps remain at the browser's full refresh rate.
+          const interval = width < 768 ? 1000 / 30 : 1000 / 60;
+          if (!lastFrame || now - lastFrame >= interval) {
+            draw(true);
+            lastFrame = now;
+          }
           rafId = requestAnimationFrame(frame);
         }
 
@@ -1811,6 +1617,7 @@
           if (rafId !== null) {
             cancelAnimationFrame(rafId);
             rafId = null;
+            lastFrame = 0;
           }
         }
 
@@ -1904,6 +1711,22 @@
     })();
 
   </script>
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.onLoad = function () {
+      Tawk_API.showWidget();
+    };
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6acce06cc519d834c73a0d31/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 </body>
 
 </html>

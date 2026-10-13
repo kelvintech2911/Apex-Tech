@@ -117,6 +117,20 @@
     window.FT._pending = [];
   }
 
+  // Previously accepted marketing tags should not compete with the first
+  // screen. New consent choices still load immediately after the click.
+  function scheduleMarketing() {
+    function queue() {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadMarketing, { timeout: 2000 });
+      } else {
+        setTimeout(loadMarketing, 0);
+      }
+    }
+    if (document.readyState === 'complete') queue();
+    else window.addEventListener('load', queue, { once: true });
+  }
+
   /* ------------------------------------------------------------- public API */
   window.FT = {
     _pending: [],
@@ -160,12 +174,12 @@
     'max-width:560px;margin:0 auto;padding:20px 22px;border-radius:14px;',
     'background:rgba(10,15,28,.97);border:1px solid rgba(255,255,255,.14);',
     'box-shadow:0 24px 60px -20px rgba(0,0,0,.7);color:#fff;',
-    'font-family:"DM Sans","Figtree",system-ui,sans-serif;',
+    'font-family:"Segoe UI",Arial,system-ui,sans-serif;',
     'transform:translateY(140%);visibility:hidden;pointer-events:none;',
     'transition:transform .45s cubic-bezier(.16,1,.3,1),visibility 0s linear .45s}',
     '.ft-cc.is-open{transform:translateY(0);visibility:visible;pointer-events:auto;',
     'transition:transform .45s cubic-bezier(.16,1,.3,1),visibility 0s}',
-    '.ft-cc h2{font-family:"Figtree","DM Sans",system-ui,sans-serif;font-size:1rem;',
+    '.ft-cc h2{font-family:"Segoe UI",Arial,system-ui,sans-serif;font-size:1rem;',
     'font-weight:700;margin:0 0 8px}',
     '.ft-cc p{font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.66);margin:0 0 16px}',
     '.ft-cc a{color:#3b82f6;text-decoration:underline}',
@@ -259,7 +273,7 @@
 
     var choice = stored();
     if (choice === 'granted') {
-      loadMarketing();
+      scheduleMarketing();
     } else if (choice === 'denied') {
       denied = true;
       window.FT._pending = [];
@@ -269,7 +283,7 @@
     } else {
       // Outside the EU/EEA/UK. No banner in the way of the ad landing page;
       // the footer's "Cookie settings" link still lets people opt out.
-      loadMarketing();
+      scheduleMarketing();
     }
 
     // Contact-method clicks are conversions too

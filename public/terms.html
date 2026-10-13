@@ -8,14 +8,7 @@
   <meta name="description"
     content="Terms of Service for Apex Tech Digital Investigation & Mobile Forensics. Understand the terms governing the use of our services." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261013-legal" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- SEO Tags -->
   <meta name="keywords" content="terms of service, Apex Tech terms, digital investigation terms, mobile forensics terms">
@@ -52,17 +45,17 @@
        ============================================================ -->
   <script>
     window.FT_CONFIG = {
-      metaPixelId: '905768905512055',        // TODO Apex Tech: add your own Meta Pixel ID
+      metaPixelId: '905768905512055', // Active Apex Tech Meta Pixel
       ga4Id: '',              // e.g. 'G-XXXXXXXXXX'
       turnstileSiteKey: '',   // Cloudflare Turnstile site key (spam filtering)
       minFormSeconds: 3,      // submissions faster than this are treated as bots
       privacyUrl: 'privacy.html'
     };
   </script>
-  <script src="ft-tracking.js"></script>
+  <script src="ft-tracking.js" defer></script>
 </head>
 
-<body>
+<body class="legal-page">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -95,7 +88,6 @@
         <a href="index.html#services">Services</a>
         <a href="index.html#about">About</a>
         <a href="index.html#faq">FAQ</a>
-        <a href="index.html#contact">Contact</a>
       </nav>
       <a href="index.html" class="back-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -107,8 +99,9 @@
     </div>
   </header>
 
+  <main id="main" tabindex="-1">
   <!-- Hero -->
-  <section class="policy-hero" id="main" tabindex="-1">
+  <section class="policy-hero">
     <div class="container">
       <h1>Terms of Service</h1>
       <p>Terms and conditions governing the use of Apex Tech services.</p>
@@ -117,14 +110,36 @@
   </section>
 
   <!-- Content -->
-  <article class="policy-content">
+  <div class="container policy-shell">
+    <aside class="policy-toc" aria-label="Terms of service contents">
+      <p class="policy-toc-title">On this page</p>
+      <nav>
+        <a href="#acceptance">Acceptance</a>
+        <a href="#service-overview">Services overview</a>
+        <a href="#engagement">Consultation</a>
+        <a href="#responsibilities">Client responsibilities</a>
+        <a href="#authorization">Authorization</a>
+        <a href="#confidentiality">Confidentiality</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#fees">Fees and payment</a>
+        <a href="#liability">Liability</a>
+        <a href="#intellectual-property">Intellectual property</a>
+        <a href="#termination">Termination</a>
+        <a href="#website-use">Website use</a>
+        <a href="#term-changes">Changes</a>
+        <a href="#governing-law">Governing law</a>
+        <a href="#terms-contact">Contact us</a>
+      </nav>
+    </aside>
 
-    <h2>1. Acceptance of Terms</h2>
+    <article class="policy-content">
+
+    <h2 id="acceptance">1. Acceptance of Terms</h2>
     <p>By accessing our website or engaging the services of Apex Tech ("we", "our", or "us"), you agree to be bound
       by these Terms of Service. If you do not agree with any part of these terms, please do not use our website or
       services.</p>
 
-    <h2>2. Services Overview</h2>
+    <h2 id="service-overview">2. Services Overview</h2>
     <p>Apex Tech provides professional digital investigation and mobile forensics services, including but not limited
       to:</p>
     <ul>
@@ -139,12 +154,12 @@
     <p>All services are provided subject to technical feasibility, legal authorization, and a prior consultation to
       determine scope and requirements.</p>
 
-    <h2>3. Consultation & Engagement</h2>
+    <h2 id="engagement">3. Consultation &amp; Engagement</h2>
     <p>All engagements begin with an initial consultation to understand your requirements. Submitting a contact form or
       consultation request does not constitute a binding agreement. A formal engagement begins only when both parties
       have agreed on the scope, timeline, and terms of the investigation.</p>
 
-    <h2>4. Client Responsibilities</h2>
+    <h2 id="responsibilities">4. Client Responsibilities</h2>
     <p>When engaging our services, you agree to:</p>
     <ul>
       <li>Provide accurate and truthful information about your case and requirements.</li>
@@ -154,28 +169,28 @@
       <li>Refrain from sharing sensitive credentials or passwords through unsecured channels unless instructed.</li>
     </ul>
 
-    <h2>5. Authorization & Legal Compliance</h2>
+    <h2 id="authorization">5. Authorization &amp; Legal Compliance</h2>
     <p>Apex Tech operates within the boundaries of applicable law. We reserve the right to decline any engagement
       that, in our professional judgment, may involve unlawful activity, lack proper authorization, or pose ethical
       concerns. Clients are solely responsible for ensuring they have the legal right to request the services being
       sought.</p>
 
-    <h2>6. Confidentiality</h2>
+    <h2 id="confidentiality">6. Confidentiality</h2>
     <p>All information shared with us during the course of an investigation is treated as strictly confidential. We do
       not disclose case details, findings, or client information to unauthorized third parties. Our confidentiality
       obligations survive the completion or termination of any engagement.</p>
 
-    <h2>7. Deliverables & Reports</h2>
+    <h2 id="deliverables">7. Deliverables &amp; Reports</h2>
     <p>Where applicable, we provide written documentation of our findings, methods used, and conclusions. Reports are
       prepared for the intended audience and delivered in a clear, professional format. The specific deliverables will
       be agreed upon during the engagement process.</p>
 
-    <h2>8. Fees & Payment</h2>
+    <h2 id="fees">8. Fees &amp; Payment</h2>
     <p>Service fees are determined on a case-by-case basis and communicated during the consultation process. Payment
       terms, including any deposits or milestone payments, will be agreed upon before work begins. All fees are
       non-refundable once the investigation work has commenced, unless otherwise agreed in writing.</p>
 
-    <h2>9. Limitation of Liability</h2>
+    <h2 id="liability">9. Limitation of Liability</h2>
     <p>While we strive to deliver thorough and accurate results, the nature of digital investigation means that outcomes
       cannot be guaranteed. Specifically:</p>
     <ul>
@@ -186,17 +201,17 @@
         claim.</li>
     </ul>
 
-    <h2>10. Intellectual Property</h2>
+    <h2 id="intellectual-property">10. Intellectual Property</h2>
     <p>All methodologies, tools, techniques, and proprietary processes used by Apex Tech remain our intellectual
       property. Reports and deliverables provided to clients may be used for their intended purpose but may not be
       reproduced, distributed, or published without our written consent.</p>
 
-    <h2>11. Termination</h2>
+    <h2 id="termination">11. Termination</h2>
     <p>Either party may terminate an engagement with written notice. In the event of termination, the client is
       responsible for fees associated with work already completed. We reserve the right to terminate any engagement
       immediately if we discover the engagement involves unlawful activity or misrepresentation.</p>
 
-    <h2>12. Website Use</h2>
+    <h2 id="website-use">12. Website Use</h2>
     <p>By using our website, you agree not to:</p>
     <ul>
       <li>Attempt to gain unauthorized access to our systems or data.</li>
@@ -205,15 +220,15 @@
       <li>Use the website in any way that could damage, disable, or impair our services.</li>
     </ul>
 
-    <h2>13. Changes to These Terms</h2>
+    <h2 id="term-changes">13. Changes to These Terms</h2>
     <p>We reserve the right to update these Terms of Service at any time. Changes take effect upon posting to this page.
       Continued use of our website or services after changes constitutes acceptance of the revised terms.</p>
 
-    <h2>14. Governing Law</h2>
+    <h2 id="governing-law">14. Governing Law</h2>
     <p>These Terms of Service shall be governed by and construed in accordance with applicable laws. Any disputes arising
       from these terms or the use of our services shall be resolved through appropriate legal channels.</p>
 
-    <h2>15. Contact Us</h2>
+    <h2 id="terms-contact">15. Contact Us</h2>
     <p>If you have questions about these Terms of Service, please contact us:</p>
     <ul>
       <li><strong>Email:</strong> <a href="mailto:apextechforensics@gmail.com">apextechforensics@gmail.com</a>
@@ -224,7 +239,9 @@
           rel="noopener noreferrer">@Apextechforensics</a></li>
     </ul>
 
-  </article>
+    </article>
+  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="page-footer">
@@ -242,6 +259,22 @@
       el.textContent = new Date().getFullYear();
     });
   </script>
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.onLoad = function () {
+      Tawk_API.showWidget();
+    };
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6acce06cc519d834c73a0d31/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 </body>
 
 </html>
